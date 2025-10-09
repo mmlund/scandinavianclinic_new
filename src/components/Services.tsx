@@ -1,0 +1,98 @@
+import treatment1 from "@/assets/treatment-1.jpg";
+import treatment2 from "@/assets/treatment-2.jpg";
+import dnsTraining from "@/assets/dns-training.jpg";
+import painPoints from "@/assets/pain-points.png";
+import { Card } from "@/components/ui/card";
+import { Activity, Target, Heart, Stethoscope } from "lucide-react";
+
+export const Services = () => {
+  const services = [
+    {
+      icon: <Stethoscope className="w-8 h-8" />,
+      title: "Orthopedic Manual Therapy",
+      description: "Combining spinal manipulation, mobilization, massage, and stretching to restore function and decrease pain.",
+      image: treatment1
+    },
+    {
+      icon: <Activity className="w-8 h-8" />,
+      title: "Dynamic Neuromuscular Stabilization",
+      description: "Fast-growing active treatment method for chronic pain prevention, rehabilitation, and athletic performance improvement.",
+      image: dnsTraining
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "Customized Treatment Plans",
+      description: "Tailored assessment and treatment specific to your condition, ensuring we address the root cause of your pain.",
+      image: treatment2
+    },
+    {
+      icon: <Heart className="w-8 h-8" />,
+      title: "Prevention & Self-Management",
+      description: "Empowering you with tools and knowledge to take care of yourself and prevent future injuries.",
+      image: painPoints
+    }
+  ];
+
+  return (
+    <section id="services" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
+            Our Approach
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Comprehensive Care Solutions
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            For positive long-term results, you need to restore your natural muscle balance. 
+            We use a combination of manual treatments and active therapies focused on movement and muscle activation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {services.map((service, index) => (
+            <Card
+              key={index}
+              className="group overflow-hidden border-0 shadow-card hover:shadow-xl transition-all duration-300 animate-scale-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-primary-foreground">
+                  {service.icon}
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-foreground mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-16 max-w-4xl mx-auto bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 md:p-12">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
+            It All Has to Fit - For You
+          </h3>
+          <p className="text-lg text-muted-foreground text-center leading-relaxed mb-6">
+            Our first step is always to find the root cause of your pain. Treatment is then tailored 
+            to your specific condition and needs. Our goal is to alleviate your pain and prevent it from returning.
+          </p>
+          <p className="text-center text-muted-foreground">
+            Whatever your active lifestyle looks like, we want you to enjoy it without the restrictions 
+            of pain, discomfort, and improper movement.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};

@@ -10,13 +10,13 @@ export const Services = () => {
     {
       icon: <Stethoscope className="w-8 h-8" />,
       title: "Orthopedic Manual Therapy",
-      description: "Combining spinal manipulation, mobilization, massage, and stretching to restore function and decrease pain.",
+      description: "Combination of treatments: spine and joint mobilization, soft tissue including fascia, specific stretching, neuro dynamics to restore function and decrease pain.",
       image: treatment1
     },
     {
       icon: <Activity className="w-8 h-8" />,
       title: "Dynamic Neuromuscular Stabilization",
-      description: "Fast-growing active treatment method for chronic pain prevention, rehabilitation, and athletic performance improvement.",
+      description: "Fast-growing active treatment method for training and pain prevention, rehabilitation and and athletic performance improvement.",
       image: dnsTraining
     },
     {

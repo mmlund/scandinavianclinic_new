@@ -16,7 +16,7 @@ export const Services = () => {
     {
       icon: <Activity className="w-8 h-8" />,
       title: "Dynamic Neuromuscular Stabilization",
-      description: "Fast-growing active treatment method for training and pain prevention, rehabilitation and and athletic performance improvement.",
+      description: "Fast-growing active treatment method for training and pain prevention, rehabilitation and and athletic performance improvement. DNS stabilizes core muscles: diaphragm, pelvic floor, and all parts of the abdominal wall.",
       image: dnsTraining
     },
     {

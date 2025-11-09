@@ -10,7 +10,7 @@ export const Services = () => {
     {
       icon: <Stethoscope className="w-8 h-8" />,
       title: "Orthopedic Manual Therapy",
-      description: "Combination of treatments: spine and joint mobilization, soft tissue including fascia, specific stretching, neuro dynamics to restore function and decrease pain.",
+      description: "Combination of treatments: spine and joint mobilization, soft tissue including fascia, specific stretching, and neurodynamics to restore function and decrease pain.",
       image: treatment1
     },
     {

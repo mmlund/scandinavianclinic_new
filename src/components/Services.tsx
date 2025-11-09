@@ -45,7 +45,7 @@ export const Services = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             For positive long-term results, you need to restore your natural muscle balance. 
-            We use a combination of manual treatments and active therapies focused on movement and muscle activation.
+            We use a combination of manual treatments, active therapies, and training focused on movement and muscle activation.
           </p>
         </div>
 

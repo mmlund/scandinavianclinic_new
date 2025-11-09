@@ -4,6 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 export const About = () => {
   const credentials = [
     "5-year Scandinavian post-secondary education and training",
+    "Czech-trained DNS therapist",
     "Advanced biomechanical assessment expertise",
     "Focus on prevention and self-management",
     "Multiple treatment modality integration",

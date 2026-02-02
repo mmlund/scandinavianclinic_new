@@ -1,5 +1,5 @@
 import manualTherapy from "@/assets/manual-therapy.jpg";
-import treatment2 from "@/assets/treatment-2.jpg";
+import customizedTreatment from "@/assets/customized-treatment.jpg";
 import dnsVideo from "@/assets/dns-video.mp4";
 import painPoints from "@/assets/pain-points.png";
 import { Card } from "@/components/ui/card";
@@ -23,7 +23,7 @@ export const Services = () => {
       icon: <Target className="w-8 h-8" />,
       title: "Customized Treatment Plans",
       description: "Tailored assessment and treatment specific to your condition, ensuring we address the root cause of your pain.",
-      image: treatment2
+      image: customizedTreatment
     },
     {
       icon: <Heart className="w-8 h-8" />,

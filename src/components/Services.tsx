@@ -1,4 +1,4 @@
-import treatment1 from "@/assets/treatment-1.jpg";
+import manualTherapy from "@/assets/manual-therapy.jpg";
 import treatment2 from "@/assets/treatment-2.jpg";
 import dnsTraining from "@/assets/dns-training.jpg";
 import painPoints from "@/assets/pain-points.png";
@@ -11,7 +11,7 @@ export const Services = () => {
       icon: <Stethoscope className="w-8 h-8" />,
       title: "Orthopedic Manual Therapy",
       description: "Combination of treatments: spine and joint mobilization, soft tissue including fascia, specific stretching, and neurodynamics to restore function and decrease pain.",
-      image: treatment1
+      image: manualTherapy
     },
     {
       icon: <Activity className="w-8 h-8" />,

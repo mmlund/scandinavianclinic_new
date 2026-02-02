@@ -236,7 +236,7 @@ const RMTCore1 = () => {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="max-w-md mx-auto">
               <Card className="p-8 border-0 shadow-card bg-background">
                 <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
                   <CheckCircle className="w-6 h-6 text-primary" />
@@ -246,21 +246,6 @@ const RMTCore1 = () => {
                   {goodFit.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-
-              <Card className="p-8 border-0 shadow-card bg-background">
-                <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
-                  <XCircle className="w-6 h-6 text-muted-foreground" />
-                  Not a Good Fit
-                </h3>
-                <ul className="space-y-4">
-                  {notGoodFit.map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <XCircle className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{item}</span>
                     </li>
                   ))}

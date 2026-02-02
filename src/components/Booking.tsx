@@ -20,7 +20,7 @@ export const Booking = () => {
             className="bg-accent hover:bg-accent/90 text-accent-foreground py-6 px-8 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
           >
             <a
-              href="#"
+              href="https://www.scandinavianclinic.com/booking/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"

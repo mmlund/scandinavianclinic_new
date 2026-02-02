@@ -82,11 +82,18 @@ const RMTCore1 = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
-                onClick={scrollToBooking}
+                asChild
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
               >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book a Clinical RMT Appointment
+                <a
+                  href="https://www.scandinavianclinic.com/booking/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Calendar className="w-5 h-5" />
+                  Book a Clinical RMT Appointment
+                </a>
               </Button>
             </div>
             <p className="text-sm text-primary-foreground/70 mt-4">
@@ -313,7 +320,7 @@ const RMTCore1 = () => {
               className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
             >
               <a
-                href="#"
+                href="https://www.scandinavianclinic.com/booking/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"

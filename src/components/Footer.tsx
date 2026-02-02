@@ -54,10 +54,11 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li>Calgary, Alberta, Canada</li>
+              <li>Suite 202-101 West 16th Street</li>
+              <li>North Vancouver, BC V7M 1T3</li>
               <li>
-                <a href="tel:+1234567890" className="hover:text-accent transition-colors">
-                  (123) 456-7890
+                <a href="tel:+16049264883" className="hover:text-accent transition-colors">
+                  (604) 926-4883
                 </a>
               </li>
               <li>

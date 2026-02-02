@@ -1,7 +1,7 @@
 import manualTherapy from "@/assets/manual-therapy.jpg";
 import customizedTreatment from "@/assets/customized-treatment.jpg";
 import dnsVideo from "@/assets/dns-video.mp4";
-import painPoints from "@/assets/pain-points.png";
+import preventionVideo from "@/assets/prevention-video.mp4";
 import { Card } from "@/components/ui/card";
 import { Activity, Target, Heart, Stethoscope } from "lucide-react";
 
@@ -29,7 +29,7 @@ export const Services = () => {
       icon: <Heart className="w-8 h-8" />,
       title: "Prevention & Self-Management",
       description: "Empowering you with tools and knowledge to take care of yourself and prevent future injuries.",
-      image: painPoints
+      video: preventionVideo
     }
   ];
 

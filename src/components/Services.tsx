@@ -1,6 +1,6 @@
 import manualTherapy from "@/assets/manual-therapy.jpg";
 import treatment2 from "@/assets/treatment-2.jpg";
-import dnsTraining from "@/assets/dns-training.jpg";
+import dnsVideo from "@/assets/dns-video.mp4";
 import painPoints from "@/assets/pain-points.png";
 import { Card } from "@/components/ui/card";
 import { Activity, Target, Heart, Stethoscope } from "lucide-react";
@@ -17,7 +17,7 @@ export const Services = () => {
       icon: <Activity className="w-8 h-8" />,
       title: "Dynamic Neuromuscular Stabilization",
       description: "Fast-growing active treatment method for training and pain prevention, rehabilitation and and athletic performance improvement. DNS stabilizes core muscles: diaphragm, pelvic floor, and all parts of the abdominal wall.",
-      image: dnsTraining
+      video: dnsVideo
     },
     {
       icon: <Target className="w-8 h-8" />,
@@ -57,11 +57,22 @@ export const Services = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative h-64 overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                {'video' in service && service.video ? (
+                  <video
+                    src={service.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                ) : (
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 text-primary-foreground">
                   {service.icon}

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import heroEva from "@/assets/hero-eva.jpg";
 
 export const Hero = () => {
@@ -38,6 +39,22 @@ export const Hero = () => {
               Learn More
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Placeholder Links for Staging */}
+      <div className="absolute top-24 right-4 z-20 bg-background/95 backdrop-blur-sm rounded-lg shadow-lg p-4 border border-border">
+        <p className="text-sm font-semibold text-foreground mb-2">Placeholder Links</p>
+        <div className="flex flex-col gap-2">
+          <Link to="/rmt-core1" className="text-primary hover:text-primary/80 text-sm transition-colors">
+            /rmt-core1
+          </Link>
+          <Link to="/rmt-core2" className="text-primary hover:text-primary/80 text-sm transition-colors">
+            /rmt-core2
+          </Link>
+          <Link to="/rmt-core3" className="text-primary hover:text-primary/80 text-sm transition-colors">
+            /rmt-core3
+          </Link>
         </div>
       </div>
 

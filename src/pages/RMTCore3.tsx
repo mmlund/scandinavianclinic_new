@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Search, Brain, BookOpen, MapPin, Shield, Award } from "lucide-react";
 import heroVideo from "@/assets/rmt-hero-video.mp4";
-import educationImage from "@/assets/education-anatomy.jpg";
+import educationImage from "@/assets/manual-therapy-new.jpg";
 import reasoningImage from "@/assets/manual-therapy-session.jpg";
 import assessmentImage from "@/assets/clinical-assessment.jpg";
 import treatmentImage from "@/assets/targeted-treatment.jpg";

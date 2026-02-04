@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, XCircle, Search, Brain, Target, BookOpen, MapPin, Shield, Calendar, Award } from "lucide-react";
+import { CheckCircle, Search, Brain, BookOpen, MapPin, Shield, Award } from "lucide-react";
 import heroVideo from "@/assets/rmt-hero-video.mp4";
 import educationImage from "@/assets/education-anatomy.jpg";
 import reasoningImage from "@/assets/manual-therapy-session.jpg";
@@ -17,32 +17,18 @@ const RMTCore3 = () => {
     "Want a thoughtful, clinical treatment process"
   ];
 
-  const notGoodFit = [
-    "Are primarily seeking relaxation or stress-relief massage",
-    "Prefer spa-style experiences",
-    "Want passive treatment without assessment"
-  ];
-
   const approachPoints = [
     {
       icon: Search,
-      title: "Assessment before treatment",
-      description: "Each session begins with understanding pain patterns, movement patterns, joint behaviour, and contributing factors. Carefully identifying cause(s) guides treatment strategy."
+      title: "Assessment before treatment"
     },
     {
       icon: Brain,
-      title: "Individualized clinical logic",
-      description: "Treatment is chosen because it fits your presentation — not because it's part of a routine."
-    },
-    {
-      icon: Target,
-      title: "Precision over force",
-      description: "The goal is to provide effective input at the right place and in the right amount."
+      title: "Individualized treatments"
     },
     {
       icon: BookOpen,
-      title: "Education and prevention",
-      description: "The right training and education will keep the problem from coming back and are a key part of any treatment."
+      title: "Education and prevention"
     }
   ];
 
@@ -56,7 +42,7 @@ const RMTCore3 = () => {
     {
       number: "2",
       title: "Targeted manual therapy",
-      description: "Hands-on treatment selected based on assessment findings — not routines.",
+      description: "Hands-on treatment selected based on assessment findings.",
       image: treatmentImage
     },
     {
@@ -70,8 +56,7 @@ const RMTCore3 = () => {
   const credentials = [
     { icon: Award, text: "Registered Massage Therapy (RMT)" },
     { icon: Shield, text: "Eligible for extended health insurance" },
-    { icon: MapPin, text: "Located in North Vancouver" },
-    { icon: Calendar, text: "Appointment-based clinical practice" }
+    { icon: MapPin, text: "Located in North Vancouver" }
   ];
 
   return (
@@ -88,11 +73,8 @@ const RMTCore3 = () => {
                 Registered Massage Therapy with{" "}
                 <span className="text-primary">Advanced European Clinical Training</span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-4 leading-relaxed">
-                Assessment-driven RMT care for patients who value depth, reasoning, and precision.
-              </p>
-              <p className="text-sm text-muted-foreground mb-8">
-                This clinic provides clinical massage therapy — not spa massage.
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+                Clinical RMT care for patients who value depth, reasoning, and precision.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -137,16 +119,13 @@ const RMTCore3 = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Why the therapist's training matters
+                Experience Matters
               </h2>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Not all education emphasizes the same depth of clinical reasoning.
-              </p>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 My background prioritizes assessment, biomechanics, and problem-solving.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                At Scandinavian Clinic, the approach to Registered Massage Therapy is informed by European university-level manual therapy education, where the primary goal is to understand <strong>why</strong> a problem exists — not just where it hurts.
+                At Scandinavian Clinic, the approach to Registered Massage Therapy is informed by European university-level manual therapy education, where the primary goal is to understand <strong>why</strong> a problem exists.
               </p>
               <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
                 This background influences how each patient is assessed, treated, and guided.
@@ -168,12 +147,9 @@ const RMTCore3 = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="animate-fade-in">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                A reasoning-based approach to RMT
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+                A structured Approach to RMT
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Rather than applying the same techniques to every patient, treatment decisions are based on clinical findings.
-              </p>
               <div className="space-y-6">
                 {approachPoints.map((point, index) => (
                   <div key={index} className="flex gap-4">
@@ -181,8 +157,7 @@ const RMTCore3 = () => {
                       <point.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-2">{point.title}</h3>
-                      <p className="text-muted-foreground">{point.description}</p>
+                      <h3 className="text-lg font-semibold text-foreground">{point.title}</h3>
                     </div>
                   </div>
                 ))}
@@ -207,7 +182,7 @@ const RMTCore3 = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What to expect in an RMT session
+              What to expect at the Scandinavian Clinic
             </h2>
           </div>
 
@@ -237,11 +212,8 @@ const RMTCore3 = () => {
           </div>
 
           <div className="text-center mt-12 animate-fade-in">
-            <p className="text-lg text-foreground font-medium mb-2">
+            <p className="text-lg text-foreground font-medium">
               Sessions are structured, focused, and collaborative.
-            </p>
-            <p className="text-muted-foreground italic">
-              This is not a relaxation-based massage experience.
             </p>
           </div>
         </div>
@@ -256,8 +228,7 @@ const RMTCore3 = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Good Fit */}
+          <div className="max-w-2xl mx-auto">
             <div className="bg-card rounded-2xl p-8 shadow-lg border-2 border-primary/20 animate-fade-in">
               <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
                 <CheckCircle className="w-6 h-6 text-primary" />
@@ -272,27 +243,7 @@ const RMTCore3 = () => {
                 ))}
               </ul>
             </div>
-
-            {/* Not a Good Fit */}
-            <div className="bg-card rounded-2xl p-8 shadow-lg border border-border animate-fade-in">
-              <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
-                <XCircle className="w-6 h-6 text-muted-foreground" />
-                This clinic is not a good fit if you:
-              </h3>
-              <ul className="space-y-4">
-                {notGoodFit.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <XCircle className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
-
-          <p className="text-center text-muted-foreground mt-8 animate-fade-in">
-            Clarity here helps ensure a better experience for both patient and therapist.
-          </p>
         </div>
       </section>
 
@@ -315,7 +266,7 @@ const RMTCore3 = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-              Looking for a more thoughtful approach to RMT care?
+              Looking for a thoughtful approach to RMT care?
             </h2>
             <Button
               asChild

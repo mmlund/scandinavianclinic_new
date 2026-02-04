@@ -6,7 +6,7 @@ import heroVideo from "@/assets/rmt-hero-video.mp4";
 import educationImage from "@/assets/manual-therapy-new.jpg";
 import reasoningImage from "@/assets/manual-therapy-session.jpg";
 import assessmentImage from "@/assets/clinical-assessment.jpg";
-import treatmentImage from "@/assets/targeted-treatment.jpg";
+import treatmentImage from "@/assets/targeted-treatment-new.jpg";
 import correctiveImage from "@/assets/corrective-exercise.jpg";
 
 const RMTCore3 = () => {

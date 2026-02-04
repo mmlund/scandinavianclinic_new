@@ -24,19 +24,15 @@ const RMTCore1 = () => {
   const sessionSteps = [
     {
       icon: <ClipboardList className="w-6 h-6" />,
-      title: "Assessment",
-      description: "Movement, history, and physical examination to understand contributing factors.",
-      detail: "I use several specific movement tests to evaluate the range of motion and imbalances across different joint segments, ligaments, and muscles. I will closely study how you move and investigate your pattern of pain."
+      title: "Assessment"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Targeted Treatment",
-      description: "Hands-on therapy chosen based on findings — not routines."
+      title: "Targeted Treatment"
     },
     {
       icon: <MessageCircle className="w-6 h-6" />,
-      title: "Plan & Guidance",
-      description: "Clear explanation of what's driving the pain and what to do next."
+      title: "Plan & Guidance"
     }
   ];
 
@@ -123,13 +119,10 @@ const RMTCore1 = () => {
             </div>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Scandinavian Clinic provides Registered Massage Therapy focused on identifying and treating the underlying causes of pain — not temporary relief through relaxation techniques.
+                Scandinavian Clinic provides Registered Massage Therapy focused on identifying and treating the underlying causes of pain.
               </p>
               <p>
                 Each session begins with a thorough clinical assessment and reasoning, followed by hands-on treatment chosen specifically for your condition.
-              </p>
-              <p className="font-semibold text-foreground bg-muted p-6 rounded-lg border-l-4 border-accent">
-                If you're looking for a spa-style or relaxation massage, this clinic is likely not the right fit.
               </p>
             </div>
           </div>
@@ -141,9 +134,6 @@ const RMTCore1 = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <div className="text-center mb-12">
-              <div className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
-                Reassurance
-              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Common Reasons Patients Come Here
               </h2>
@@ -159,9 +149,6 @@ const RMTCore1 = () => {
                 </div>
               ))}
             </div>
-            <p className="text-sm text-muted-foreground text-center italic">
-              Treatment is always individualized. This is not a protocol-based clinic.
-            </p>
           </div>
         </div>
       </section>
@@ -171,9 +158,6 @@ const RMTCore1 = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 animate-fade-in">
-              <div className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
-                Trust & Clarity
-              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 What to Expect in a Session
               </h2>
@@ -188,24 +172,13 @@ const RMTCore1 = () => {
                         {step.icon}
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-foreground mb-2">
+                        <h3 className="text-xl font-bold text-foreground">
                           {index + 1}. {step.title}
                         </h3>
-                        <p className="text-muted-foreground mb-2">
-                          {step.description}
-                        </p>
-                        {step.detail && (
-                          <p className="text-sm text-muted-foreground">
-                            {step.detail}
-                          </p>
-                        )}
                       </div>
                     </div>
                   </Card>
                 ))}
-                <p className="text-muted-foreground italic pl-4 border-l-4 border-primary/30">
-                  Sessions are focused, clinical, and purposeful — not passive relaxation.
-                </p>
               </div>
 
               <div className="relative rounded-2xl overflow-hidden shadow-xl animate-scale-in">
@@ -228,9 +201,6 @@ const RMTCore1 = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <div className="text-center mb-12">
-              <div className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
-                Self-Selection
-              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Is This the Right Clinic for You?
               </h2>
@@ -284,7 +254,7 @@ const RMTCore1 = () => {
                     I have five years of post-secondary education and many courses in manual medicine.
                   </p>
                   <p className="font-medium text-foreground">
-                    The focus is not on techniques — but on reasoning, progression, and results.
+                    The focus is on investigation, reasoning, progression and results.
                   </p>
                 </div>
               </div>
@@ -315,7 +285,7 @@ const RMTCore1 = () => {
               </a>
             </Button>
             <p className="text-sm text-primary-foreground/70 mt-4">
-              Direct billing not required · Insurance receipts provided
+              Insurance receipts provided
             </p>
           </div>
         </div>

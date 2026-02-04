@@ -156,32 +156,28 @@ const RMTCore1 = () => {
       {/* Section 3: How Sessions Work */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8 animate-fade-in">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 What to Expect in a Session
               </h2>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6 items-center">
+              <div className="space-y-3">
                 {sessionSteps.map((step, index) => (
-                  <Card key={index} className="p-6 border-0 shadow-card animate-slide-in-left" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        {step.icon}
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-foreground">
-                          {index + 1}. {step.title}
-                        </h3>
-                      </div>
+                  <div key={index} className="flex items-center gap-3 p-4 bg-muted/30 rounded-lg animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                      {step.icon}
                     </div>
-                  </Card>
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {index + 1}. {step.title}
+                    </h3>
+                  </div>
                 ))}
               </div>
 
-              <div className="relative rounded-2xl overflow-hidden shadow-xl animate-scale-in">
+              <div className="relative rounded-xl overflow-hidden shadow-lg animate-scale-in">
                 <video
                   src={rmtSessionVideo}
                   autoPlay

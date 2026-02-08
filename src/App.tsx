@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import RMTCore1 from "./pages/RMTCore1";
 import RMTCore2 from "./pages/RMTCore2";
 import RMTCore3 from "./pages/RMTCore3";
+import Payment from "./pages/Payment";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/rmt-core1" element={<RMTCore1 />} />
           <Route path="/rmt-core2" element={<RMTCore2 />} />
           <Route path="/rmt-core3" element={<RMTCore3 />} />
+          <Route path="/payment" element={<Payment />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -22,7 +22,7 @@ const BeforeBook = () => {
     },
     {
       title: "Cancellations:",
-      text: "Cancel at least 24 hours in advance via your email link to avoid a potential late cancellation fee. For urgent changes, please call 604-926-4883."
+      text: "Cancel at least 24 hours in advance via your email link to avoid a full cancellation fee. For urgent changes, please call 604-926-4883."
     },
     {
       title: "Special Programs:",

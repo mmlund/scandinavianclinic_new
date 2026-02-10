@@ -1,11 +1,13 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { About } from "@/components/About";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Calendar, CheckCircle, XCircle, Stethoscope, ClipboardList, Target, MessageCircle } from "lucide-react";
 import rmtHero from "@/assets/rmt-hero.jpg";
 import rmtEducation from "@/assets/rmt-education.jpg";
 import rmtSessionVideo from "@/assets/rmt-session-video.mp4";
+import painCollage from "@/assets/pain-collage.png";
 
 const RMTCore1 = () => {
   const scrollToBooking = () => {
@@ -152,6 +154,9 @@ const RMTCore1 = () => {
           </div>
         </div>
       </section>
+
+      {/* About / Clinical RMT Focus Section */}
+      <About imageSrc={painCollage} imageAlt="Common pain points including back, neck, knee, and shoulder pain" />
 
       {/* Section 3: How Sessions Work */}
       <section className="py-20 bg-background">

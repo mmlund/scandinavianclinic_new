@@ -35,7 +35,7 @@ export const About = ({ imageSrc, imageAlt }: AboutProps) => {
           {/* Content */}
           <div className="animate-fade-in">
           <div className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
-            Swedish-Trained Expertise – Czech-trained DNS therapist
+            Swedish-Trained – Czech-trained DNS therapist
           </div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Clinical RMT Focus

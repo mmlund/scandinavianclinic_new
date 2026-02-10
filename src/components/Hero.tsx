@@ -32,12 +32,6 @@ export const Hero = () => {
             >
               Book Your Appointment
             </Link>
-            <button
-              onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
-              className="bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all backdrop-blur-sm border border-primary-foreground/30"
-            >
-              Learn More
-            </button>
           </div>
         </div>
       </div>

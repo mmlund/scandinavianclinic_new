@@ -55,6 +55,9 @@ export const Hero = () => {
           <Link to="/rmt-core3" className="text-primary hover:text-primary/80 text-sm transition-colors">
             /rmt-core3
           </Link>
+          <Link to="/backpain" className="text-primary hover:text-primary/80 text-sm transition-colors">
+            /backpain
+          </Link>
         </div>
       </div>
 

@@ -37,7 +37,7 @@ export const Navigation = () => {
           >
             <img src={logo} alt="Scandinavian Clinic logo" className="w-10 h-10 rounded-md shadow-sm" />
             <span className={`text-2xl font-bold tracking-wide transition-colors duration-300 ${
-              isScrolled ? "text-primary" : "text-primary-foreground"
+              isScrolled ? "text-primary" : "text-white drop-shadow-md"
             }`}>
               SCANDINAVIAN CLINIC
             </span>

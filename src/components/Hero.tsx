@@ -26,12 +26,12 @@ export const Hero = () => {
             Your muscles are the best tools for treating pain and developing optimal movement patterns
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button
-              onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
+            <Link
+              to="/beforebook"
               className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg"
             >
               Book Your Appointment
-            </button>
+            </Link>
             <button
               onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
               className="bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all backdrop-blur-sm border border-primary-foreground/30"

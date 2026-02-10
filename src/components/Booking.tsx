@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Booking = () => {
   return (
@@ -19,15 +20,13 @@ export const Booking = () => {
             asChild
             className="bg-accent hover:bg-accent/90 text-accent-foreground py-6 px-8 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
           >
-            <a
-              href="https://www.scandinavianclinic.com/booking/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/beforebook"
               className="flex items-center gap-2"
             >
               <Calendar size={20} />
               Book Your Appointment
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

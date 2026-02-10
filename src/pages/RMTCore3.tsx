@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { About } from "@/components/About";
+import { Link } from "react-router-dom";
 import painCollage from "@/assets/pain-collage.png";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Search, Brain, BookOpen, MapPin, Shield, Award } from "lucide-react";
@@ -83,13 +84,11 @@ const RMTCore3 = () => {
                   asChild
                   className="bg-accent hover:bg-accent/90 text-accent-foreground py-6 px-8 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
                 >
-                  <a
-                    href="https://www.scandinavianclinic.com/booking/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to="/beforebook"
                   >
                     Book an RMT Assessment & Treatment
-                  </a>
+                  </Link>
                 </Button>
               </div>
               <p className="text-sm text-muted-foreground mt-4">
@@ -279,13 +278,11 @@ const RMTCore3 = () => {
               asChild
               className="bg-accent hover:bg-accent/90 text-accent-foreground py-6 px-8 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
             >
-              <a
-                href="https://www.scandinavianclinic.com/booking/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/beforebook"
               >
                 Book an RMT Assessment & Treatment
-              </a>
+              </Link>
             </Button>
             <p className="text-primary-foreground/80 mt-4 text-sm">
               Appointments focus on assessment, clinical reasoning, and targeted treatment.

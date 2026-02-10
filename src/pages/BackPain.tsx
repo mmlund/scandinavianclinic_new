@@ -6,6 +6,7 @@ import { Contact } from "@/components/Contact";
 import { CheckCircle2, Activity, Target, Heart, Stethoscope } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import backpainVideo from "@/assets/backpain-video.mp4";
+import heroEva from "@/assets/hero-eva.jpg";
 import manualTherapy from "@/assets/manual-therapy.jpg";
 import customizedTreatment from "@/assets/customized-treatment.jpg";
 import dnsVideo from "@/assets/dns-video.mp4";
@@ -53,7 +54,16 @@ const BackPain = () => {
       <Navigation />
       <main>
         {/* Hero */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src={heroEva}
+              alt="Professional orthopedic therapy environment"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
+          </div>
           <div className="container mx-auto px-4 z-10 relative">
             <div className="max-w-3xl animate-fade-in">
               <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">

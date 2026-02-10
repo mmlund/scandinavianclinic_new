@@ -143,6 +143,9 @@ const RMTCore3 = () => {
         </div>
       </section>
 
+      {/* About Section */}
+      <About />
+
       {/* Reasoning-Based Approach Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -178,8 +181,7 @@ const RMTCore3 = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <About />
+
 
       {/* What to Expect Section */}
       <section className="py-20 bg-secondary/30">

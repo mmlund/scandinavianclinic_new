@@ -33,7 +33,7 @@ export const About = () => {
             Swedish-Trained Expertise – Czech-trained DNS therapist
           </div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Eva Andersson
+              Clinical RMT Focus
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Eva received her comprehensive education and training in Orthopedic Manual Therapy in Sweden. 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,9 +33,14 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-xl font-bold text-primary hover:opacity-80 transition-opacity"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            SCANDINAVIAN CLINIC
+            <img src={logo} alt="Scandinavian Clinic logo" className="w-10 h-10 rounded-md shadow-sm" />
+            <span className={`text-2xl font-bold tracking-wide transition-colors duration-300 ${
+              isScrolled ? "text-primary" : "text-primary-foreground"
+            }`}>
+              SCANDINAVIAN CLINIC
+            </span>
           </button>
 
           {/* Desktop Navigation */}

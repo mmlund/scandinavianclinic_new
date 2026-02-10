@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { About } from "@/components/About";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Search, Brain, BookOpen, MapPin, Shield, Award } from "lucide-react";
 import heroVideo from "@/assets/rmt-hero-video.mp4";
@@ -176,6 +177,9 @@ const RMTCore3 = () => {
           </div>
         </div>
       </section>
+
+      {/* About Section */}
+      <About />
 
       {/* What to Expect Section */}
       <section className="py-20 bg-secondary/30">

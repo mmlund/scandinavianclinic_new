@@ -5,7 +5,7 @@ import { Booking } from "@/components/Booking";
 import { Contact } from "@/components/Contact";
 import { CheckCircle2, Activity, Target, Heart, Stethoscope } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import backpainVideo from "@/assets/backpain-video.mp4";
+import painCollage from "@/assets/pain-collage.png";
 import heroEva from "@/assets/hero-eva.jpg";
 import manualTherapy from "@/assets/manual-therapy.jpg";
 import customizedTreatment from "@/assets/customized-treatment.jpg";
@@ -105,12 +105,9 @@ const BackPain = () => {
               <div className="animate-slide-in-left">
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl" />
-                  <video
-                    src={backpainVideo}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
+                  <img
+                    src={painCollage}
+                    alt="Common pain points including back, neck, knee, and shoulder pain"
                     className="relative rounded-2xl shadow-card w-full object-cover"
                   />
                 </div>

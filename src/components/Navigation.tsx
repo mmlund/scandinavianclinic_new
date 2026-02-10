@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 export const Navigation = () => {
@@ -70,13 +71,9 @@ export const Navigation = () => {
               Contact
             </a>
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <a
-                href="https://www.scandinavianclinic.com/booking/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link to="/beforebook">
                 Book Appointment
-              </a>
+              </Link>
             </Button>
           </div>
 
@@ -122,14 +119,12 @@ export const Navigation = () => {
                 Contact
               </a>
               <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mx-4">
-                <a
-                  href="https://www.scandinavianclinic.com/booking/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/beforebook"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Book Appointment
-                </a>
+                </Link>
               </Button>
             </div>
           </div>

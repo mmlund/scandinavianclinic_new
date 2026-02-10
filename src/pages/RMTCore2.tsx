@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Calendar, CheckCircle, Search, Target, Lightbulb, ClipboardList, Hand, RefreshCw, MapPin, Phone, Mail, Shield } from "lucide-react";
 import evaHeadshot from "@/assets/eva-headshot.jpg";
@@ -94,15 +95,13 @@ const RMTCore2 = () => {
                   asChild
                   className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
                 >
-                  <a
-                    href="https://www.scandinavianclinic.com/booking/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to="/beforebook"
                     className="flex items-center gap-2"
                   >
                     <Calendar className="w-5 h-5" />
                     Book an RMT Assessment & Treatment
-                  </a>
+                  </Link>
                 </Button>
               </div>
               <p className="text-sm text-primary-foreground/70 mt-4">
@@ -412,15 +411,13 @@ const RMTCore2 = () => {
                 asChild
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
               >
-                <a
-                  href="https://www.scandinavianclinic.com/booking/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/beforebook"
                   className="flex items-center gap-2"
                 >
                   <Calendar className="w-5 h-5" />
                   Book an RMT Assessment & Treatment
-                </a>
+                </Link>
               </Button>
               <p className="text-sm text-primary-foreground/70 mt-4">
                 Appointments are clinical in nature and focused on identifying and addressing contributing factors.

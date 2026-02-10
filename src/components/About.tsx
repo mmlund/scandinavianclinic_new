@@ -1,7 +1,12 @@
 import evaProfile from "@/assets/eva-profile.jpg";
 import { CheckCircle2 } from "lucide-react";
 
-export const About = () => {
+interface AboutProps {
+  imageSrc?: string;
+  imageAlt?: string;
+}
+
+export const About = ({ imageSrc, imageAlt }: AboutProps) => {
   const credentials = [
     "5-year Scandinavian post-secondary education and training",
     "Czech-trained DNS therapist",
@@ -20,8 +25,8 @@ export const About = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl" />
               <img
-                src={evaProfile}
-                alt="Eva Andersson, Registered Massage Therapist"
+                src={imageSrc || evaProfile}
+                alt={imageAlt || "Eva Andersson, Registered Massage Therapist"}
                 className="relative rounded-2xl shadow-card w-full object-cover"
               />
             </div>

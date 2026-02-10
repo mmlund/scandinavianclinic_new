@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { About } from "@/components/About";
+import painCollage from "@/assets/pain-collage.png";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Search, Brain, BookOpen, MapPin, Shield, Award } from "lucide-react";
 import heroVideo from "@/assets/rmt-hero-video.mp4";
@@ -144,7 +145,7 @@ const RMTCore3 = () => {
       </section>
 
       {/* About Section */}
-      <About />
+      <About imageSrc={painCollage} imageAlt="Common pain points including back, neck, knee, and shoulder pain" />
 
       {/* Reasoning-Based Approach Section */}
       <section className="py-20 bg-background">

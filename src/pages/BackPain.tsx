@@ -26,7 +26,7 @@ const BackPain = () => {
   const services = [
     {
       icon: <Stethoscope className="w-8 h-8" />,
-      title: "Orthopedic Manual Therapy for Backpain",
+      title: "Orthopedic Manual Therapy for Back Pain",
       description: "Combination of treatments: spine and joint mobilization, soft tissue including fascia, specific stretching, and neurodynamics to restore function and decrease pain.",
       image: manualTherapy
     },
@@ -38,13 +38,13 @@ const BackPain = () => {
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Customized Treatment Plans for Backpain",
+      title: "Customized Treatment Plans for Back Pain",
       description: "Tailored assessment and treatment specific to your condition, ensuring we address the root cause of your pain.",
       image: customizedTreatment
     },
     {
       icon: <Heart className="w-8 h-8" />,
-      title: "Prevention & Self-Management for Backpain",
+      title: "Prevention & Self-Management for Back Pain",
       description: "Empowering you with tools and knowledge to take care of yourself and prevent future injuries.",
       video: preventionVideo
     }
@@ -70,7 +70,7 @@ const BackPain = () => {
               <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
                 My Approach to
                 <br />
-                <span className="text-accent">Backpain</span>
+                <span className="text-accent">Back Pain</span>
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed">
                 Your muscles are the best tools for treating pain and developing optimal movement patterns
@@ -167,7 +167,7 @@ const BackPain = () => {
                 Our Approach
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                Comprehensive Care Solutions for Backpain
+                Comprehensive Care Solutions for Back Pain
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 For positive long-term results, you need to restore your natural muscle balance. 
@@ -218,7 +218,7 @@ const BackPain = () => {
 
             <div className="mt-16 max-w-4xl mx-auto bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 md:p-12">
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
-                It All Has to Fit - For Your Backpain
+                It All Has to Fit - For Your Back Pain
               </h3>
               <p className="text-lg text-muted-foreground text-center leading-relaxed mb-6">
                 Our first step is always to find the root cause of your pain. Treatment is then tailored 

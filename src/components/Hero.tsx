@@ -36,21 +36,6 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Placeholder Links for Staging */}
-      <div className="absolute top-24 right-4 z-20 bg-background/95 backdrop-blur-sm rounded-lg shadow-lg p-4 border border-border">
-        <p className="text-sm font-semibold text-foreground mb-2">Placeholder Links</p>
-        <div className="flex flex-col gap-2">
-          <Link to="/rmt-core1" className="text-primary hover:text-primary/80 text-sm transition-colors">
-            /rmt-core1
-          </Link>
-          <Link to="/rmt-core3" className="text-primary hover:text-primary/80 text-sm transition-colors">
-            /rmt-core3
-          </Link>
-          <Link to="/backpain" className="text-primary hover:text-primary/80 text-sm transition-colors">
-            /backpain
-          </Link>
-        </div>
-      </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">

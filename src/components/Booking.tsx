@@ -20,13 +20,15 @@ export const Booking = () => {
             asChild
             className="bg-accent hover:bg-accent/90 text-accent-foreground py-6 px-8 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
           >
-            <Link
-              to="/beforebook"
+            <a
+              href="https://booking.scandinavianclinic.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
               <Calendar size={20} />
               Book Your Appointment
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

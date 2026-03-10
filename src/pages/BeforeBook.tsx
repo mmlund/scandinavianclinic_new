@@ -78,7 +78,7 @@ const BeforeBook = () => {
               >
                 {agreed ? (
                   <a
-                    href="https://www.scandinavianclinic.com/booking2/"
+                    href="https://booking.scandinavianclinic.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2"

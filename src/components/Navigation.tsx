@@ -71,9 +71,9 @@ export const Navigation = () => {
               Contact
             </a>
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link to="/beforebook">
+              <a href="https://booking.scandinavianclinic.com/" target="_blank" rel="noopener noreferrer">
                 Book Appointment
-              </Link>
+              </a>
             </Button>
           </div>
 
@@ -119,12 +119,14 @@ export const Navigation = () => {
                 Contact
               </a>
               <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mx-4">
-                <Link
-                  to="/beforebook"
+                <a
+                  href="https://booking.scandinavianclinic.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Book Appointment
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

@@ -84,13 +84,10 @@ const RMTCore1 = () => {
                 asChild
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
               >
-                <Link
-                  to="/beforebook"
-                  className="flex items-center gap-2"
-                >
+                <a href="https://booking.scandinavianclinic.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
                   Book a Clinical RMT Appointment
-                </Link>
+                </a>
               </Button>
             </div>
             <p className="text-sm text-primary-foreground/70 mt-4">
@@ -274,13 +271,10 @@ const RMTCore1 = () => {
               asChild
               className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
             >
-              <Link
-                to="/beforebook"
-                className="flex items-center gap-2"
-              >
+              <a href="https://booking.scandinavianclinic.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Calendar className="w-5 h-5" />
                 Book a Clinical RMT Appointment
-              </Link>
+              </a>
             </Button>
             <p className="text-sm text-primary-foreground/70 mt-4">
               Insurance receipts provided

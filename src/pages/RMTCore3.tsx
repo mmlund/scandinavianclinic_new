@@ -84,11 +84,9 @@ const RMTCore3 = () => {
                   asChild
                   className="bg-accent hover:bg-accent/90 text-accent-foreground py-6 px-8 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
                 >
-                  <Link
-                    to="/beforebook"
-                  >
+                  <a href="https://booking.scandinavianclinic.com/" target="_blank" rel="noopener noreferrer">
                     Book an RMT Assessment & Treatment
-                  </Link>
+                  </a>
                 </Button>
               </div>
               <p className="text-sm text-muted-foreground mt-4">
@@ -278,11 +276,9 @@ const RMTCore3 = () => {
               asChild
               className="bg-accent hover:bg-accent/90 text-accent-foreground py-6 px-8 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
             >
-              <Link
-                to="/beforebook"
-              >
+              <a href="https://booking.scandinavianclinic.com/" target="_blank" rel="noopener noreferrer">
                 Book an RMT Assessment & Treatment
-              </Link>
+              </a>
             </Button>
             <p className="text-primary-foreground/80 mt-4 text-sm">
               Appointments focus on assessment, clinical reasoning, and targeted treatment.

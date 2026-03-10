@@ -41,12 +41,14 @@ export const Footer = () => {
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
+                <a
+                  href="https://booking.scandinavianclinic.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-accent transition-colors"
                 >
                   Book Appointment
-                </button>
+                </a>
               </li>
             </ul>
           </div>

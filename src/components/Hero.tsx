@@ -26,12 +26,14 @@ export const Hero = () => {
             Your muscles are the best tools for treating pain and developing optimal movement patterns
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              to="/beforebook"
+            <a
+              href="https://booking.scandinavianclinic.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg"
             >
               Book Your Appointment
-            </Link>
+            </a>
           </div>
         </div>
       </div>

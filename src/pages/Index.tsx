@@ -6,8 +6,15 @@ import { Testimonials } from "@/components/Testimonials";
 import { Booking } from "@/components/Booking";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const Index = () => {
+  usePageMeta({
+    title: "Scandinavian Clinic | Orthopedic & Sports Therapy in North Vancouver",
+    description: "Expert orthopedic manual therapy combining Swedish-trained techniques with active rehabilitation. Specializing in pain treatment, movement optimization, and DNS training in North Vancouver.",
+    canonical: "https://www.scandinavianclinic.com/"
+  });
+
   return (
     <div className="min-h-screen">
       <Navigation />

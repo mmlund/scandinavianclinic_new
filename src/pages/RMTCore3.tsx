@@ -11,8 +11,14 @@ import reasoningImage from "@/assets/manual-therapy-session.jpg";
 import assessmentImage from "@/assets/clinical-assessment.jpg";
 import treatmentImage from "@/assets/targeted-treatment-new.jpg";
 import correctiveImage from "@/assets/corrective-exercise.jpg";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const RMTCore3 = () => {
+  usePageMeta({
+    title: "Sports & Orthopedic Therapy | Scandinavian Clinic North Vancouver",
+    description: "Advanced European clinical training in RMT. Assessment-based orthopedic and sports therapy for lasting results in North Vancouver.",
+    canonical: "https://www.scandinavianclinic.com/rmt-core3"
+  });
   const goodFit = [
     "Value understanding the cause of your problem",
     "Prefer structured, assessment-based care",

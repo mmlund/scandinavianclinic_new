@@ -9,8 +9,14 @@ import rmtHero from "@/assets/rmt-hero.jpg";
 import rmtEducation from "@/assets/rmt-education.jpg";
 import rmtSessionVideo from "@/assets/rmt-session-video.mp4";
 import painCollage from "@/assets/pain-collage.png";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const RMTCore1 = () => {
+  usePageMeta({
+    title: "RMT & Massage Therapy | Scandinavian Clinic North Vancouver",
+    description: "Clinical Registered Massage Therapy for persistent pain. Thorough assessment, targeted treatment, and personalized rehabilitation in North Vancouver.",
+    canonical: "https://www.scandinavianclinic.com/rmt-core1"
+  });
   const scrollToBooking = () => {
     document.getElementById("rmt-final-cta")?.scrollIntoView({ behavior: "smooth" });
   };

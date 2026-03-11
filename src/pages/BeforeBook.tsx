@@ -3,8 +3,15 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, Phone } from "lucide-react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const BeforeBook = () => {
+  usePageMeta({
+    title: "Book Your Appointment | Scandinavian Clinic",
+    description: "Review booking policies and schedule your orthopedic therapy appointment at Scandinavian Clinic in North Vancouver.",
+    canonical: "https://www.scandinavianclinic.com/beforebook"
+  });
+
   const [agreed, setAgreed] = useState(false);
 
   const policies = [

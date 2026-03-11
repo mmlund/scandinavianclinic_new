@@ -42,9 +42,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://booking.scandinavianclinic.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/beforebook"
                   className="hover:text-accent transition-colors"
                 >
                   Book Appointment

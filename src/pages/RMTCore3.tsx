@@ -90,7 +90,7 @@ const RMTCore3 = () => {
                   asChild
                   className="bg-accent hover:bg-accent/90 text-accent-foreground py-6 px-8 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
                 >
-                  <a href="https://booking.scandinavianclinic.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="/beforebook">
                     Book an RMT Assessment & Treatment
                   </a>
                 </Button>

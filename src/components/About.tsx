@@ -27,6 +27,7 @@ export const About = ({ imageSrc, imageAlt }: AboutProps) => {
               <img
                 src={imageSrc || evaProfile}
                 alt={imageAlt || "Eva Andersson, Registered Massage Therapist"}
+                loading="lazy"
                 className="relative rounded-2xl shadow-card w-full object-cover"
               />
             </div>

@@ -12,8 +12,14 @@ import manualTherapy from "@/assets/manual-therapy.jpg";
 import customizedTreatment from "@/assets/customized-treatment.jpg";
 import dnsVideo from "@/assets/dns-video.mp4";
 import preventionVideo from "@/assets/prevention-video.mp4";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const BackPain = () => {
+  usePageMeta({
+    title: "Back Pain Treatment | Scandinavian Clinic North Vancouver",
+    description: "Specialized back pain treatment with orthopedic manual therapy and DNS training in North Vancouver.",
+    canonical: "https://www.scandinavianclinic.com/backpain"
+  });
   const credentials = [
     "5-year Scandinavian post-secondary education and training",
     "Czech-trained DNS therapist",

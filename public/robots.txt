@@ -1,8 +1,14 @@
 User-agent: Googlebot
 Allow: /
+Disallow: /rmt-core2
+Disallow: /backpain
+Disallow: /payment
 
 User-agent: Bingbot
 Allow: /
+Disallow: /rmt-core2
+Disallow: /backpain
+Disallow: /payment
 
 User-agent: Twitterbot
 Allow: /
@@ -12,3 +18,8 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /rmt-core2
+Disallow: /backpain
+Disallow: /payment
+
+Sitemap: https://www.scandinavianclinic.com/sitemap.xml

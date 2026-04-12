@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Calendar, CheckCircle, XCircle, Stethoscope, ClipboardList, Target, MessageCircle } from "lucide-react";
 import heroEva from "@/assets/hero-eva.jpg";
 import rmtEducation from "@/assets/rmt-education.jpg";
-import rmtSessionVideo from "@/assets/rmt-session-video.mp4";
+import rmtSession from "@/assets/rmt-session.jpg";
 import painCollage from "@/assets/pain-collage.png";
 import { usePageMeta } from "@/hooks/use-page-meta";
 

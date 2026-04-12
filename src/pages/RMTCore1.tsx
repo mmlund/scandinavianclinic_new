@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Calendar, CheckCircle, XCircle, Stethoscope, ClipboardList, Target, MessageCircle } from "lucide-react";
-import rmtHero from "@/assets/rmt-hero.jpg";
+import heroEva from "@/assets/hero-eva.jpg";
 import rmtEducation from "@/assets/rmt-education.jpg";
 import rmtSessionVideo from "@/assets/rmt-session-video.mp4";
 import painCollage from "@/assets/pain-collage.png";
@@ -65,7 +65,7 @@ const RMTCore1 = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={rmtHero}
+            src={heroEva}
             alt="Clinical RMT treatment session"
             className="w-full h-full object-cover"
           />

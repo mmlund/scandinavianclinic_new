@@ -185,13 +185,11 @@ const RMTCore1 = () => {
               </div>
 
               <div className="relative rounded-xl overflow-hidden shadow-lg animate-scale-in">
-                <video
-                  src={rmtSessionVideo}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                <img
+                  src={rmtSession}
+                  alt="Clinical leg massage therapy treatment"
                   className="w-full aspect-video object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>

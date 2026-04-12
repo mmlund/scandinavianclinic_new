@@ -17,11 +17,12 @@ export const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-3xl animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Active Treatment
-            <br />
-            <span className="text-accent">for an Active Lifestyle</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-4 leading-tight">
+            Registered Massage Therapy North Vancouver
           </h1>
+          <p className="text-2xl md:text-3xl font-semibold text-accent mb-6">
+            Active Treatment for an Active Lifestyle
+          </p>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed">
             Your muscles are the best tools for treating pain and developing optimal movement patterns
           </p>

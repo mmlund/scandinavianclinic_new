@@ -75,7 +75,7 @@ const RMTCore1 = () => {
         <div className="container mx-auto px-4 z-10 relative">
           <div className="max-w-3xl animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-              Registered Massage Therapy
+              Registered Massage Therapy in North Vancouver
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed">
               Your muscles are the best tools for treating pain and developing optimal movement patterns.

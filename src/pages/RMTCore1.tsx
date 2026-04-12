@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Calendar, CheckCircle, XCircle, Stethoscope, ClipboardList, Target, MessageCircle } from "lucide-react";
-import rmtHero from "@/assets/rmt-hero.jpg";
+import heroEva from "@/assets/hero-eva.jpg";
 import rmtEducation from "@/assets/rmt-education.jpg";
 import rmtSessionVideo from "@/assets/rmt-session-video.mp4";
 import painCollage from "@/assets/pain-collage.png";

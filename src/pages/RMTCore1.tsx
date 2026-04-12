@@ -74,16 +74,11 @@ const RMTCore1 = () => {
 
         <div className="container mx-auto px-4 z-10 relative">
           <div className="max-w-3xl animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
               Registered Massage Therapy
-              <br />
-              <span className="text-accent">for Persistent Pain</span>
             </h1>
-            <p className="text-2xl md:text-3xl text-primary-foreground/90 mb-4 font-medium">
-              Clinical assessment. Targeted treatment.
-            </p>
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl leading-relaxed">
-              For people who need thorough assessments, specific treatments, and training programs tailored to their needs.
+            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed">
+              Your muscles are the best tools for treating pain and developing optimal movement patterns.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button

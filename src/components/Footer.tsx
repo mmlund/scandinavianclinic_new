@@ -7,6 +7,9 @@ export const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4">SCANDINAVIAN CLINIC</h3>
+            <p className="text-primary-foreground/80 leading-relaxed mb-2">
+              Scandinavian Clinic is a registered massage therapy clinic located in North Vancouver.
+            </p>
             <p className="text-primary-foreground/80 leading-relaxed">
               Orthopedic & Sports Therapy providing expert care through Swedish-trained 
               manual therapy techniques and active rehabilitation.

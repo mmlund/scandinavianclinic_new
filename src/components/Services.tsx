@@ -1,4 +1,4 @@
-import manualTherapy from "@/assets/manual-therapy.jpg";
+import manualTherapy from "@/assets/orthopedic-manual-therapy.jpg";
 import customizedTreatment from "@/assets/customized-treatment.jpg";
 import dnsVideo from "@/assets/dns-video.mp4";
 import preventionVideo from "@/assets/prevention-video.mp4";

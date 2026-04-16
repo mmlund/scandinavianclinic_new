@@ -119,47 +119,11 @@ const Facilities = () => {
                 </p>
               </Card>
             </div>
-
-            {/* Rehab Floor Image + Two Cards */}
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="order-2 md:order-1 space-y-6">
-                <Card className="p-8 border-0 shadow-card bg-background">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
-                    {environment[1].icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
-                    {environment[1].title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {environment[1].description}
-                  </p>
-                </Card>
-                <Card className="p-8 border-0 shadow-card bg-background">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
-                    {environment[2].icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
-                    {environment[2].title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {environment[2].description}
-                  </p>
-                </Card>
-              </div>
-              <div className="order-1 md:order-2 rounded-2xl overflow-hidden shadow-card aspect-[4/3]">
-                <img
-                  src={rehabFloor}
-                  alt="Active rehabilitation floor at Liberation Fitness with treadmills, ellipticals and strength equipment used for functional rehab in North Vancouver"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
           </div>
         </div>
 
         {/* Full-bleed panoramic rehab floor */}
-        <div className="w-full mb-12">
+        <div className="w-full my-12">
           <div className="relative w-full overflow-hidden shadow-card">
             <img
               src={rehabFloor}
@@ -196,6 +160,11 @@ const Facilities = () => {
                 </p>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location & Accessibility */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">

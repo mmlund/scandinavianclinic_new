@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import heroEva from "@/assets/rmt-hero-eva.jpg";
 import rmtSession from "@/assets/rmt-session-new.jpg";
-import evaProfile from "@/assets/eva-profile.jpg";
+import evaProfile from "@/assets/rmt-puzzle.jpg";
 import { usePageMeta } from "@/hooks/use-page-meta";
 
 const RMT = () => {

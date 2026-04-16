@@ -13,6 +13,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import bodyMap from "@/assets/conditions-body-map.png";
 
 const ConditionsTreated = () => {
   usePageMeta({
@@ -155,26 +156,38 @@ const ConditionsTreated = () => {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative py-24 md:py-32 bg-gradient-to-br from-primary via-primary to-primary/80 overflow-hidden">
+      <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary via-primary to-primary/80 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-accent blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-accent/60 blur-3xl" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-accent/20 border border-accent/30 text-accent-foreground text-sm font-semibold mb-6 backdrop-blur-sm">
-              Registered Massage Therapy · North Vancouver
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12 items-center">
+            <div className="lg:col-span-3 animate-fade-in">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-accent/20 border border-accent/30 text-accent-foreground text-sm font-semibold mb-6 backdrop-blur-sm">
+                Registered Massage Therapy · North Vancouver
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
+                Conditions We Treat
+              </h1>
+              <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
+                At Scandinavian Clinic, we use Registered Massage Therapy to address a
+                wide range of musculoskeletal issues, from everyday aches and postural
+                strain to complex injury recovery. Every treatment begins with a
+                clinical assessment to ensure we are targeting the source of your
+                discomfort.
+              </p>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-              Conditions We Treat
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
-              At Scandinavian Clinic, we use Registered Massage Therapy to address a
-              wide range of musculoskeletal issues, from everyday aches and postural
-              strain to complex injury recovery. Every treatment begins with a
-              clinical assessment to ensure we are targeting the source of your
-              discomfort.
-            </p>
+            <div className="lg:col-span-2 flex justify-center animate-scale-in">
+              <div className="relative bg-background/95 rounded-2xl p-6 shadow-2xl backdrop-blur-sm">
+                <img
+                  src={bodyMap}
+                  alt="Visual guide to common musculoskeletal complaints: neck, shoulder, back, arm, leg, and foot pain"
+                  className="w-full max-w-xs h-auto object-contain"
+                  loading="eager"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

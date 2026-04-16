@@ -16,6 +16,7 @@ import BeforeBook from "./pages/BeforeBook";
 import ConditionsTreated from "./pages/ConditionsTreated";
 import AboutMe from "./pages/AboutMe";
 import Facilities from "./pages/Facilities";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +55,7 @@ const App = () => (
           <Route path="/conditions-treated" element={<ConditionsTreated />} />
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/facilities" element={<Facilities />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

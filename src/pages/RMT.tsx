@@ -13,7 +13,7 @@ import {
   Zap,
   HeartPulse,
 } from "lucide-react";
-import heroEva from "@/assets/hero-eva.jpg";
+import heroEva from "@/assets/rmt-hero-eva.jpg";
 import rmtSession from "@/assets/rmt-session-new.jpg";
 import evaProfile from "@/assets/eva-profile.jpg";
 import { usePageMeta } from "@/hooks/use-page-meta";

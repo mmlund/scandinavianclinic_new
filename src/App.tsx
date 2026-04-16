@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { initTracking, sendTrackingData } from "@/lib/tracking";
 import Index from "./pages/Index";
 import RMTCore1 from "./pages/RMTCore1";
+import RMT from "./pages/RMT";
 import RMTCore2 from "./pages/NotUsed";
 import RMTCore3 from "./pages/RMTCore3";
 import Payment from "./pages/Payment";

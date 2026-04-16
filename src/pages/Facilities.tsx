@@ -157,9 +157,45 @@ const Facilities = () => {
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Location & Accessibility */}
+        {/* Full-bleed panoramic rehab floor */}
+        <div className="w-full mb-12">
+          <div className="relative w-full overflow-hidden shadow-card">
+            <img
+              src={rehabFloor}
+              alt="Spacious active rehabilitation floor at Liberation Fitness with treadmills, ellipticals, exercise bikes, free weights and strength equipment used for functional rehab in North Vancouver"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="p-8 border-0 shadow-card bg-background">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                  {environment[1].icon}
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-3">
+                  {environment[1].title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {environment[1].description}
+                </p>
+              </Card>
+              <Card className="p-8 border-0 shadow-card bg-background">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                  {environment[2].icon}
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-3">
+                  {environment[2].title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {environment[2].description}
+                </p>
+              </Card>
+            </div>
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">

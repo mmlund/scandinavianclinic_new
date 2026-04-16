@@ -131,11 +131,11 @@ const RMT = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl animate-scale-in">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl animate-scale-in bg-background p-6">
                 <img
                   src={evaProfile}
-                  alt="Eva Andersson, Registered Massage Therapist in North Vancouver"
-                  className="w-full aspect-[4/5] object-cover"
+                  alt="Our four-pillar approach: assessment, treatment, individualized training, and education"
+                  className="w-full aspect-square object-contain"
                   loading="lazy"
                 />
               </div>

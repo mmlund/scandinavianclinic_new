@@ -46,34 +46,14 @@ export const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            <a
-              href="/#about"
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              About
-            </a>
-            <a
-              href="/#services"
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Services
-            </a>
-            <a
-              href="/#testimonials"
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Testimonials
-            </a>
-            <a
-              href="/#contact"
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Contact
-            </a>
+            <Link to="/about-me" className="text-foreground hover:text-primary transition-colors font-medium">About</Link>
+            <Link to="/services" className="text-foreground hover:text-primary transition-colors font-medium">Services</Link>
+            <Link to="/conditions-treated" className="text-foreground hover:text-primary transition-colors font-medium">Conditions</Link>
+            <Link to="/facilities" className="text-foreground hover:text-primary transition-colors font-medium">Facilities</Link>
+            <Link to="/r-m-t" className="text-foreground hover:text-primary transition-colors font-medium">RMT</Link>
+            <Link to="/contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</Link>
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <a href="/booking">
-                Book Appointment
-              </a>
+              <Link to="/booking">Book Appointment</Link>
             </Button>
           </div>
 
@@ -90,41 +70,14 @@ export const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 py-4 bg-background rounded-lg shadow-lg">
             <div className="flex flex-col gap-4">
-              <a
-                href="/#about"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left"
-              >
-                About
-              </a>
-              <a
-                href="/#services"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left"
-              >
-                Services
-              </a>
-              <a
-                href="/#testimonials"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left"
-              >
-                Testimonials
-              </a>
-              <a
-                href="/#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left"
-              >
-                Contact
-              </a>
+              <Link to="/about-me" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">About</Link>
+              <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Services</Link>
+              <Link to="/conditions-treated" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Conditions</Link>
+              <Link to="/facilities" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Facilities</Link>
+              <Link to="/r-m-t" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">RMT</Link>
+              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Contact</Link>
               <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mx-4">
-                <a
-                  href="/booking"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Book Appointment
-                </a>
+                <Link to="/booking" onClick={() => setIsMobileMenuOpen(false)}>Book Appointment</Link>
               </Button>
             </div>
           </div>

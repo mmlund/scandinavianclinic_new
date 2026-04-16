@@ -205,13 +205,6 @@ const AboutMe = () => {
                   <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-accent/10 blur-2xl" />
 
                   <div className="relative z-10">
-                    <div className="text-xs font-semibold text-accent uppercase tracking-widest mb-2">
-                      Clinical Authority
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-8 leading-tight">
-                      Why Patients Choose Eva
-                    </h3>
-
                     <div className="space-y-4">
                       {authorityKeywords.map((kw, index) => (
                         <div

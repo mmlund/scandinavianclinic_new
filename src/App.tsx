@@ -42,6 +42,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/rmt-core1" element={<RMTCore1 />} />
+          <Route path="/r-m-t" element={<RMT />} />
           <Route path="/rmt-core2" element={<RMTCore2 />} />
           <Route path="/rmt-core3" element={<RMTCore3 />} />
           <Route path="/payment" element={<Payment />} />

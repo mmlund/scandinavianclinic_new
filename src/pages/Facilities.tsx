@@ -12,7 +12,7 @@ import {
   Calendar,
   ExternalLink,
 } from "lucide-react";
-import rehabFloor from "@/assets/facility-rehab-floor.jpg";
+import rehabFloor from "@/assets/facility-rehab-floor-wide.jpg";
 import treatmentRoom from "@/assets/facility-treatment-room.jpg";
 import exterior from "@/assets/facility-exterior.jpg";
 import { Link } from "react-router-dom";
@@ -77,7 +77,7 @@ const Facilities = () => {
               Scandinavian Clinic is located within Liberation Fitness in the heart of Central
               Lonsdale. Our facility is designed for clinical investigation and functional
               movement. This location allows us to bridge the gap between table-based manual
-              therapy and weight-bearing orthopedic rehabilitation.
+              therapy and rehabilitation.
             </p>
           </div>
         </div>

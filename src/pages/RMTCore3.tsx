@@ -90,7 +90,7 @@ const RMTCore3 = () => {
                   asChild
                   className="bg-accent hover:bg-accent/90 text-accent-foreground py-6 px-8 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
                 >
-                  <a href="/beforebook">
+                  <a href="/booking">
                     Book an RMT Assessment & Treatment
                   </a>
                 </Button>
@@ -282,7 +282,7 @@ const RMTCore3 = () => {
               asChild
               className="bg-accent hover:bg-accent/90 text-accent-foreground py-6 px-8 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
             >
-              <a href="/beforebook">
+              <a href="/booking">
                 Book an RMT Assessment & Treatment
               </a>
             </Button>

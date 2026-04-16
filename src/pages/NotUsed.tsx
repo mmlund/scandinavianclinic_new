@@ -96,7 +96,7 @@ const RMTCore2 = () => {
                   className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
                 >
                   <Link
-                    to="/beforebook"
+                    to="/booking"
                     className="flex items-center gap-2"
                   >
                     <Calendar className="w-5 h-5" />
@@ -412,7 +412,7 @@ const RMTCore2 = () => {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
               >
                 <Link
-                  to="/beforebook"
+                  to="/booking"
                   className="flex items-center gap-2"
                 >
                   <Calendar className="w-5 h-5" />

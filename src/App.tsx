@@ -12,7 +12,7 @@ import RMTCore2 from "./pages/NotUsed";
 import RMTCore3 from "./pages/RMTCore3";
 import Payment from "./pages/Payment";
 import BackPain from "./pages/BackPain";
-import BeforeBook from "./pages/BeforeBook";
+import Booking from "./pages/Booking";
 import ConditionsTreated from "./pages/ConditionsTreated";
 import AboutMe from "./pages/AboutMe";
 import Facilities from "./pages/Facilities";
@@ -52,7 +52,7 @@ const App = () => (
           <Route path="/rmt-core3" element={<RMTCore3 />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/backpain" element={<BackPain />} />
-          <Route path="/beforebook" element={<BeforeBook />} />
+          <Route path="/booking" element={<Booking />} />
           <Route path="/conditions-treated" element={<ConditionsTreated />} />
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/facilities" element={<Facilities />} />

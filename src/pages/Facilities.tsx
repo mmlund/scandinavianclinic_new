@@ -12,7 +12,7 @@ import {
   Calendar,
   ExternalLink,
 } from "lucide-react";
-import rehabFloor from "@/assets/facility-rehab-floor.jpg";
+import rehabFloor from "@/assets/facility-rehab-floor-wide.jpg";
 import treatmentRoom from "@/assets/facility-treatment-room.jpg";
 import exterior from "@/assets/facility-exterior.jpg";
 import { Link } from "react-router-dom";
@@ -77,7 +77,7 @@ const Facilities = () => {
               Scandinavian Clinic is located within Liberation Fitness in the heart of Central
               Lonsdale. Our facility is designed for clinical investigation and functional
               movement. This location allows us to bridge the gap between table-based manual
-              therapy and weight-bearing orthopedic rehabilitation.
+              therapy and rehabilitation.
             </p>
           </div>
         </div>
@@ -119,41 +119,46 @@ const Facilities = () => {
                 </p>
               </Card>
             </div>
+          </div>
+        </div>
 
-            {/* Rehab Floor Image + Two Cards */}
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="order-2 md:order-1 space-y-6">
-                <Card className="p-8 border-0 shadow-card bg-background">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
-                    {environment[1].icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
-                    {environment[1].title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {environment[1].description}
-                  </p>
-                </Card>
-                <Card className="p-8 border-0 shadow-card bg-background">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
-                    {environment[2].icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
-                    {environment[2].title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {environment[2].description}
-                  </p>
-                </Card>
-              </div>
-              <div className="order-1 md:order-2 rounded-2xl overflow-hidden shadow-card aspect-[4/3]">
-                <img
-                  src={rehabFloor}
-                  alt="Active rehabilitation floor at Liberation Fitness with treadmills, ellipticals and strength equipment used for functional rehab in North Vancouver"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+        {/* Full-bleed panoramic rehab floor */}
+        <div className="w-full my-12">
+          <div className="relative w-full overflow-hidden shadow-card">
+            <img
+              src={rehabFloor}
+              alt="Spacious active rehabilitation floor at Liberation Fitness with treadmills, ellipticals, exercise bikes, free weights and strength equipment used for functional rehab in North Vancouver"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="p-8 border-0 shadow-card bg-background">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                  {environment[1].icon}
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-3">
+                  {environment[1].title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {environment[1].description}
+                </p>
+              </Card>
+              <Card className="p-8 border-0 shadow-card bg-background">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                  {environment[2].icon}
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-3">
+                  {environment[2].title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {environment[2].description}
+                </p>
+              </Card>
             </div>
           </div>
         </div>

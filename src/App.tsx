@@ -13,6 +13,7 @@ import RMTCore3 from "./pages/RMTCore3";
 import Payment from "./pages/Payment";
 import BackPain from "./pages/BackPain";
 import BeforeBook from "./pages/BeforeBook";
+import ConditionsTreated from "./pages/ConditionsTreated";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/payment" element={<Payment />} />
           <Route path="/backpain" element={<BackPain />} />
           <Route path="/beforebook" element={<BeforeBook />} />
+          <Route path="/conditions-treated" element={<ConditionsTreated />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

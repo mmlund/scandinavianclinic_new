@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { initTracking, sendTrackingData } from "@/lib/tracking";
 import Index from "./pages/Index";
 import RMTCore1 from "./pages/RMTCore1";
+import RMT from "./pages/RMT";
 import RMTCore2 from "./pages/NotUsed";
 import RMTCore3 from "./pages/RMTCore3";
 import Payment from "./pages/Payment";
@@ -41,6 +42,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/rmt-core1" element={<RMTCore1 />} />
+          <Route path="/r-m-t" element={<RMT />} />
           <Route path="/rmt-core2" element={<RMTCore2 />} />
           <Route path="/rmt-core3" element={<RMTCore3 />} />
           <Route path="/payment" element={<Payment />} />

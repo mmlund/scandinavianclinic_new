@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Phone } from "lucide-react";
 import { usePageMeta } from "@/hooks/use-page-meta";
 
-const BeforeBook = () => {
+const Booking = () => {
   usePageMeta({
     title: "Book Your Appointment | Scandinavian Clinic",
     description: "Review booking policies and schedule your orthopedic therapy appointment at Scandinavian Clinic in North Vancouver.",
-    canonical: "https://www.scandinavianclinic.com/beforebook"
+    canonical: "https://www.scandinavianclinic.com/booking"
   });
 
   const [agreed, setAgreed] = useState(false);
@@ -117,4 +117,4 @@ const BeforeBook = () => {
   );
 };
 
-export default BeforeBook;
+export default Booking;

@@ -83,7 +83,7 @@ const BackPain = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="/beforebook"
+                  href="/booking"
                   className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg"
                 >
                   Book Your Appointment

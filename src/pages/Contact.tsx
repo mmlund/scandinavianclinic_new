@@ -134,7 +134,7 @@ const Contact = () => {
 
               <div className="mt-auto flex flex-col sm:flex-row gap-3">
                 <Button asChild size="lg" className="flex-1">
-                  <Link to="/beforebook">
+                  <Link to="/booking">
                     <Calendar className="mr-1" size={18} />
                     Book Online
                   </Link>
@@ -216,7 +216,7 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg">
-              <Link to="/beforebook">Book Your Appointment</Link>
+              <Link to="/booking">Book Your Appointment</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
               <a href="tel:+16049264883">Call (604) 926-4883</a>

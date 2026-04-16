@@ -85,7 +85,7 @@ const RMTCore1 = () => {
                 asChild
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
               >
-                <a href="/beforebook" className="flex items-center gap-2">
+                <a href="/booking" className="flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
                   Book a Clinical RMT Appointment
                 </a>
@@ -270,7 +270,7 @@ const RMTCore1 = () => {
               asChild
               className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 text-lg font-semibold transition-all hover:scale-105 shadow-lg"
             >
-              <a href="/beforebook" className="flex items-center gap-2">
+              <a href="/booking" className="flex items-center gap-2">
                 <Calendar className="w-5 h-5" />
                 Book a Clinical RMT Appointment
               </a>

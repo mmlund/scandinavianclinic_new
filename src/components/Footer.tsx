@@ -45,7 +45,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/beforebook"
+                  href="/booking"
                   className="hover:text-accent transition-colors"
                 >
                   Book Appointment

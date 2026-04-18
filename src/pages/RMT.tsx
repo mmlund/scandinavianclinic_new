@@ -118,9 +118,8 @@ const RMT = () => {
             </div>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               At Scandinavian Clinic, Registered Massage Therapy (RMT) is a clinical
-              healthcare discipline. Our approach often works for patients who have
-              <span className="text-foreground font-medium"> "tried everything else" </span>
-              and are looking for a systematic investigation into the root cause of their pain.
+              healthcare discipline. Our approach often works for patients who
+              are looking for a systematic investigation into the root cause of their pain.
             </p>
           </div>
         </div>

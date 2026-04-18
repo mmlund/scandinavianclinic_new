@@ -51,6 +51,7 @@ export const Navigation = () => {
             <Link to="/conditions-treated" className="text-foreground hover:text-primary transition-colors font-medium">Conditions</Link>
             <Link to="/facilities" className="text-foreground hover:text-primary transition-colors font-medium">Facilities</Link>
             <Link to="/r-m-t" className="text-foreground hover:text-primary transition-colors font-medium">RMT</Link>
+            <Link to="/d-n-s" className="text-foreground hover:text-primary transition-colors font-medium">DNS</Link>
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</Link>
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
               <Link to="/booking">Book Appointment</Link>
@@ -75,6 +76,7 @@ export const Navigation = () => {
               <Link to="/conditions-treated" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Conditions</Link>
               <Link to="/facilities" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Facilities</Link>
               <Link to="/r-m-t" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">RMT</Link>
+              <Link to="/d-n-s" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">DNS</Link>
               <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Contact</Link>
               <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mx-4">
                 <Link to="/booking" onClick={() => setIsMobileMenuOpen(false)}>Book Appointment</Link>

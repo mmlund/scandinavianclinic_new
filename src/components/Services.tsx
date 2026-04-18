@@ -1,6 +1,6 @@
 import manualTherapy from "@/assets/orthopedic-manual-therapy.jpg";
 import customizedTreatment from "@/assets/customized-treatment.jpg";
-import dnsVideo from "@/assets/dns-video.mp4";
+import dnsTreatment from "@/assets/dns-treatment.jpg";
 import preventionVideo from "@/assets/prevention-video.mp4";
 import { Card } from "@/components/ui/card";
 import { Activity, Target, Heart, Stethoscope } from "lucide-react";
@@ -17,7 +17,7 @@ export const Services = () => {
       icon: <Activity className="w-8 h-8" />,
       title: "Dynamic Neuromuscular Stabilization",
       description: "Fast-growing active treatment method for training and pain prevention, rehabilitation and and athletic performance improvement. DNS stabilizes core muscles: diaphragm, pelvic floor, and all parts of the abdominal wall.",
-      video: dnsVideo
+      video: preventionVideo
     },
     {
       icon: <Target className="w-8 h-8" />,
@@ -29,7 +29,7 @@ export const Services = () => {
       icon: <Heart className="w-8 h-8" />,
       title: "Prevention & Self-Management",
       description: "Empowering you with tools and knowledge to take care of yourself and prevent future injuries.",
-      video: preventionVideo
+      image: dnsTreatment
     }
   ];
 

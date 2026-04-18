@@ -1,6 +1,6 @@
 import manualTherapy from "@/assets/orthopedic-manual-therapy.jpg";
 import customizedTreatment from "@/assets/customized-treatment.jpg";
-import dnsVideo from "@/assets/dns-video.mp4";
+import dnsTreatment from "@/assets/dns-treatment.jpg";
 import preventionVideo from "@/assets/prevention-video.mp4";
 import { Card } from "@/components/ui/card";
 import { Activity, Target, Heart, Stethoscope } from "lucide-react";

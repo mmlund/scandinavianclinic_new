@@ -41,9 +41,16 @@ const DNS = () => {
               and extremity joints. Eva often incorporates DNS principles into
               treatments.
             </p>
-            <p className="text-foreground/90 leading-relaxed">
+            <p className="text-foreground/90 leading-relaxed mb-4">
               By combining manual therapy with these principles, Eva finds she can
               provide a more integrated and comprehensive recovery plan.
+            </p>
+            <p className="text-foreground/90 leading-relaxed">
+              By training your body with DNS, you can re-establish the natural,
+              innate way of stabilizing and moving. The body's function is
+              normalized, pain and stiffness are reduced. You will also often
+              notice that your body becomes stronger and more resilient, without
+              increasing your muscle mass.
             </p>
           </Card>
 

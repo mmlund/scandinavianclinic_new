@@ -48,9 +48,6 @@ const DNS = () => {
           </Card>
 
           <Card className="p-8 md:p-10 mb-10 shadow-sm">
-            <h2 className="text-2xl font-semibold text-primary mb-4">
-              Dedicated DNS Movement Retraining at DNStrainer
-            </h2>
             <p className="text-foreground/90 leading-relaxed mb-4">
               For patients who require dedicated Dynamic Neuromuscular Stabilization
               sessions, we invite you to visit{" "}

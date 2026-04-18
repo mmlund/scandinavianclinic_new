@@ -45,13 +45,8 @@ const DNS = () => {
               treatments.
             </p>
             <p className="text-foreground/90 leading-relaxed">
-              For patients at Scandinavian Clinic, this means that your RMT treatment
-              often begins with an investigation into how your body stabilizes. By
-              applying DNS-informed assessments, Eva identifies the underlying
-              movement dysfunctions or stabilization failures that may be contributing
-              to your chronic pain or acute injury. By combining manual therapy with
-              these principles, Eva finds she can provide a more integrated and
-              comprehensive recovery plan.
+              By combining manual therapy with these principles, Eva finds she can
+              provide a more integrated and comprehensive recovery plan.
             </p>
           </Card>
 
@@ -61,9 +56,7 @@ const DNS = () => {
             </h2>
             <p className="text-foreground/90 leading-relaxed mb-4">
               For patients who require dedicated Dynamic Neuromuscular Stabilization
-              sessions—including deeper movement assessments, sports performance
-              enhancement, or structured neuro-rehabilitation programs—we invite you
-              to visit{" "}
+              sessions, we invite you to visit{" "}
               <a
                 href="https://www.dnstrainer.com"
                 target="_blank"

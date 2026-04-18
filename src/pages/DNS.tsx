@@ -49,8 +49,7 @@ const DNS = () => {
 
           <Card className="p-8 md:p-10 mb-10 shadow-sm">
             <p className="text-foreground/90 leading-relaxed mb-4">
-              For patients who require dedicated Dynamic Neuromuscular Stabilization
-              sessions, we invite you to visit{" "}
+              For more information about DNS, we invite you to visit{" "}
               <a
                 href="https://www.dnstrainer.com"
                 target="_blank"
@@ -63,9 +62,7 @@ const DNS = () => {
             </p>
             <p className="text-foreground/90 leading-relaxed">
               DNStrainer operates as a specialized movement education and
-              rehabilitation practice, focused exclusively on DNS-based movement
-              training. Although it shares our North Vancouver location within
-              Liberation Fitness, it is a distinct business.
+              rehabilitation practice, focused on DNS-based movement training.
             </p>
           </Card>
 

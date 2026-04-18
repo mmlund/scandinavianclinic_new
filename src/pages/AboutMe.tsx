@@ -105,8 +105,8 @@ const AboutMe = () => {
               developing optimal movement patterns.
             </p>
             <p className="text-lg md:text-xl text-foreground leading-relaxed font-medium border-l-4 border-accent pl-6">
-              I do not provide "general" treatments. Every session is an investigation into your
-              mechanical system to find out exactly why your body is not functioning as it should.
+              Every session is an investigation into your mechanical system to find out exactly why
+              your body is not functioning as it should.
             </p>
           </div>
         </div>

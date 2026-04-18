@@ -37,7 +37,7 @@ const RMT = () => {
       icon: <Activity className="w-6 h-6" />,
       title: "Orthopedic Manual Therapy",
       description:
-        "Utilizing Swedish orthopedic techniques to address musculoskeletal dysfunction at the source.",
+        "Utilizing various treatment modalities to address musculoskeletal dysfunction at the source.",
     },
     {
       icon: <Target className="w-6 h-6" />,

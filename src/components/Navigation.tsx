@@ -66,7 +66,19 @@ export const Navigation = () => {
             <Link to="/facilities" className="text-foreground hover:text-primary transition-colors font-medium">Facilities</Link>
             <Link to="/r-m-t" className="text-foreground hover:text-primary transition-colors font-medium">RMT</Link>
             <Link to="/d-n-s" className="text-foreground hover:text-primary transition-colors font-medium">DNS</Link>
-            <Link to="/contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-medium focus:outline-none">
+                Contact <ChevronDown size={16} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="bg-background z-50">
+                <DropdownMenuItem asChild>
+                  <Link to="/contact">Contact</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/hours">Hours</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
               <Link to="/booking">Book Appointment</Link>
             </Button>
@@ -93,6 +105,7 @@ export const Navigation = () => {
               <Link to="/r-m-t" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">RMT</Link>
               <Link to="/d-n-s" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">DNS</Link>
               <Link to="/contact" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Contact</Link>
+              <Link to="/hours" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Hours</Link>
               <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mx-4">
                 <Link to="/booking" onClick={closeMobile}>Book Appointment</Link>
               </Button>

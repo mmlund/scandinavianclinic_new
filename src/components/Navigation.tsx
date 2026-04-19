@@ -59,6 +59,9 @@ export const Navigation = () => {
                 <DropdownMenuItem asChild>
                   <Link to="/testimonials">Testimonials</Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/education">Education</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <Link to="/services" className="text-foreground hover:text-primary transition-colors font-medium">Services</Link>
@@ -100,6 +103,7 @@ export const Navigation = () => {
             <div className="flex flex-col gap-4">
               <Link to="/about-me" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">About</Link>
               <Link to="/testimonials" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Testimonials</Link>
+              <Link to="/education" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Education</Link>
               <Link to="/services" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Services</Link>
               <Link to="/first-visit" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">First Visit</Link>
               <Link to="/conditions-treated" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Conditions</Link>

@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logo from "@/assets/logo.jpg";
 
 export const Navigation = () => {
@@ -16,13 +22,7 @@ export const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
-    }
-  };
+  const closeMobile = () => setIsMobileMenuOpen(false);
 
   return (
     <nav
@@ -32,9 +32,11 @@ export const Navigation = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <button
-            onClick={() => scrollToSection("hero")}
+          <Link
+            to="/"
+            onClick={closeMobile}
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            aria-label="Scandinavian Clinic — Home"
           >
             <img src={logo} alt="Scandinavian Clinic logo" className="w-10 h-10 rounded-md shadow-sm" />
             <span className={`text-2xl font-bold tracking-wide transition-colors duration-300 ${
@@ -42,11 +44,23 @@ export const Navigation = () => {
             }`}>
               SCANDINAVIAN CLINIC
             </span>
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            <Link to="/about-me" className="text-foreground hover:text-primary transition-colors font-medium">About</Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-medium focus:outline-none">
+                About <ChevronDown size={16} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="bg-background z-50">
+                <DropdownMenuItem asChild>
+                  <Link to="/about-me">About</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/testimonials">Testimonials</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Link to="/services" className="text-foreground hover:text-primary transition-colors font-medium">Services</Link>
             <Link to="/conditions-treated" className="text-foreground hover:text-primary transition-colors font-medium">Conditions</Link>
             <Link to="/facilities" className="text-foreground hover:text-primary transition-colors font-medium">Facilities</Link>
@@ -71,15 +85,16 @@ export const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 py-4 bg-background rounded-lg shadow-lg">
             <div className="flex flex-col gap-4">
-              <Link to="/about-me" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">About</Link>
-              <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Services</Link>
-              <Link to="/conditions-treated" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Conditions</Link>
-              <Link to="/facilities" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Facilities</Link>
-              <Link to="/r-m-t" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">RMT</Link>
-              <Link to="/d-n-s" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">DNS</Link>
-              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Contact</Link>
+              <Link to="/about-me" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">About</Link>
+              <Link to="/testimonials" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Testimonials</Link>
+              <Link to="/services" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Services</Link>
+              <Link to="/conditions-treated" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Conditions</Link>
+              <Link to="/facilities" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Facilities</Link>
+              <Link to="/r-m-t" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">RMT</Link>
+              <Link to="/d-n-s" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">DNS</Link>
+              <Link to="/contact" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Contact</Link>
               <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mx-4">
-                <Link to="/booking" onClick={() => setIsMobileMenuOpen(false)}>Book Appointment</Link>
+                <Link to="/booking" onClick={closeMobile}>Book Appointment</Link>
               </Button>
             </div>
           </div>
@@ -88,3 +103,4 @@ export const Navigation = () => {
     </nav>
   );
 };
+

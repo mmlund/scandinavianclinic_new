@@ -201,6 +201,54 @@ export const aboutMeSchema = {
   ],
 };
 
+export const educationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    clinicCore,
+    {
+      "@type": "Person",
+      "@id": EVA_ID,
+      name: "Eva Andersson",
+      jobTitle: "Registered Massage Therapist",
+      description:
+        "Registered Massage Therapist with 28+ years of clinical experience in orthopedic manual therapy, Dynamic Neuromuscular Stabilization (DNS), and Western medical acupuncture.",
+      url: "https://scandinavianclinic.com/education/",
+      worksFor: { "@id": CLINIC_ID },
+      knowsAbout: [
+        "Registered Massage Therapy",
+        "Orthopedic Manual Therapy",
+        "Dynamic Neuromuscular Stabilization",
+        "Western Medical Acupuncture",
+        "Musculoskeletal Rehabilitation",
+      ],
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Professional License",
+          name: "Registered Massage Therapist (RMT)",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "College of Massage Therapists of British Columbia",
+          },
+        },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://scandinavianclinic.com/" },
+        { "@type": "ListItem", position: 2, name: "About", item: "https://scandinavianclinic.com/about-me/" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Training & Education",
+          item: "https://scandinavianclinic.com/education/",
+        },
+      ],
+    },
+  ],
+};
+
 export const firstVisitSchema = {
   "@context": "https://schema.org",
   "@graph": [

@@ -15,13 +15,15 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { servicesSchema } from "@/lib/schemas";
 
 const Services = () => {
   usePageMeta({
     title: "Our Services | RMT & DNS Therapy | Scandinavian Clinic, North Vancouver",
     description:
       "Registered Massage Therapy, Dynamic Neuromuscular Stabilization (DNS) & orthopedic rehabilitation services at Scandinavian Clinic in North Vancouver.",
-    canonical: "https://www.scandinavianclinic.com/services",
+    canonical: "https://scandinavianclinic.com/services/",
+    jsonLd: servicesSchema,
   });
 
   const conditions = [

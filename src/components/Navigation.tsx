@@ -62,6 +62,7 @@ export const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             <Link to="/services" className="text-foreground hover:text-primary transition-colors font-medium">Services</Link>
+            <Link to="/first-visit" className="text-foreground hover:text-primary transition-colors font-medium">First Visit</Link>
             <Link to="/conditions-treated" className="text-foreground hover:text-primary transition-colors font-medium">Conditions</Link>
             <Link to="/facilities" className="text-foreground hover:text-primary transition-colors font-medium">Facilities</Link>
             <Link to="/r-m-t" className="text-foreground hover:text-primary transition-colors font-medium">RMT</Link>
@@ -100,6 +101,7 @@ export const Navigation = () => {
               <Link to="/about-me" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">About</Link>
               <Link to="/testimonials" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Testimonials</Link>
               <Link to="/services" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Services</Link>
+              <Link to="/first-visit" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">First Visit</Link>
               <Link to="/conditions-treated" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Conditions</Link>
               <Link to="/facilities" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Facilities</Link>
               <Link to="/r-m-t" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">RMT</Link>

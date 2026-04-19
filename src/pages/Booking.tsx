@@ -4,12 +4,14 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, Phone } from "lucide-react";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { bookingSchema } from "@/lib/schemas";
 
 const Booking = () => {
   usePageMeta({
     title: "Book Your Appointment | Scandinavian Clinic",
     description: "Review booking policies and schedule your orthopedic therapy appointment at Scandinavian Clinic in North Vancouver.",
-    canonical: "https://www.scandinavianclinic.com/booking"
+    canonical: "https://scandinavianclinic.com/booking/",
+    jsonLd: bookingSchema,
   });
 
   const [agreed, setAgreed] = useState(false);

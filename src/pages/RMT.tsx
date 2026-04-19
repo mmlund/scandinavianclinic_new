@@ -17,13 +17,15 @@ import heroEva from "@/assets/rmt-hero-eva.jpg";
 import rmtSession from "@/assets/rmt-session-new.jpg";
 import evaProfile from "@/assets/rmt-puzzle.jpg";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { rmtSchema } from "@/lib/schemas";
 
 const RMT = () => {
   usePageMeta({
     title: "Registered Massage Therapy (RMT) North Vancouver | Scandinavian Clinic",
     description:
       "Clinical RMT in North Vancouver focusing on orthopedic assessment and root-cause treatment for chronic pain and sports injuries. Eva Andersson, RMT.",
-    canonical: "https://www.scandinavianclinic.com/r-m-t",
+    canonical: "https://scandinavianclinic.com/r-m-t/",
+    jsonLd: rmtSchema,
   });
 
   const differentiators = [

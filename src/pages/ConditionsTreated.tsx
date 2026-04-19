@@ -13,6 +13,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { conditionsTreatedSchema } from "@/lib/schemas";
 import bodyMap from "@/assets/conditions-body-map.png";
 
 const ConditionsTreated = () => {
@@ -21,7 +22,8 @@ const ConditionsTreated = () => {
       "Conditions Treated | RMT & Massage Therapy | Scandinavian Clinic, North Vancouver",
     description:
       "Comprehensive list of conditions treated with Registered Massage Therapy in North Vancouver, including back pain, neck pain, sports injuries, ICBC claims, and chronic conditions.",
-    canonical: "https://www.scandinavianclinic.com/conditions-treated",
+    canonical: "https://scandinavianclinic.com/conditions-treated/",
+    jsonLd: conditionsTreatedSchema,
   });
 
   const sections = [

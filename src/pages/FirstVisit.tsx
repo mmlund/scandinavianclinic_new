@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Calendar, Clock, Shirt, FileText, ClipboardCheck, Search, Activity, Home, Receipt, Phone, AlertCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { firstVisitSchema } from "@/lib/schemas";
 import legImage from "@/assets/first-visit-leg-treatment.jpg";
 import dnsImage from "@/assets/first-visit-dns-assessment.jpg";
 
@@ -13,7 +14,8 @@ const FirstVisit = () => {
     title: "Your First Visit | Scandinavian Clinic North Vancouver",
     description:
       "What to expect at your first RMT visit at Scandinavian Clinic. Clinical assessment, what to bring, treatment approach, and clinic policies in North Vancouver.",
-    canonical: "https://www.scandinavianclinic.com/first-visit",
+    canonical: "https://scandinavianclinic.com/first-visit/",
+    jsonLd: firstVisitSchema,
   });
 
   return (

@@ -5,13 +5,15 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Calendar, ExternalLink } from "lucide-react";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { dnsSchema } from "@/lib/schemas";
 
 const DNS = () => {
   usePageMeta({
     title: "DNS & Massage Therapy | Scandinavian Clinic North Vancouver",
     description:
       "Scandinavian Clinic integrates Dynamic Neuromuscular Stabilization (DNS) principles into Registered Massage Therapy in North Vancouver. For dedicated DNS training, visit DNStrainer.com.",
-    canonical: "https://www.scandinavianclinic.com/d-n-s",
+    canonical: "https://scandinavianclinic.com/d-n-s/",
+    jsonLd: dnsSchema,
   });
 
   return (

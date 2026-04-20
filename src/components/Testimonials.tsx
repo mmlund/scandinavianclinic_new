@@ -21,14 +21,14 @@ export const Testimonials = () => {
     <section id="testimonials" className="py-20 bg-gradient-to-b from-secondary/30 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <div className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
-            Patient Stories
+          <div className="text-base md:text-lg font-semibold text-accent mb-2 uppercase tracking-wider">
+            RMT Patient Stories
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Real Results, Real People
+            Real Results, Real People in North Vancouver
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hear from patients who have experienced lasting pain relief and improved movement
+            Hear from RMT patients who have experienced lasting pain relief and improved movement
           </p>
         </div>
 

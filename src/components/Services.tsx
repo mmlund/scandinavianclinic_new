@@ -9,7 +9,7 @@ export const Services = () => {
   const services = [
     {
       icon: <Stethoscope className="w-8 h-8" />,
-      title: "Orthopedic Manual Therapy",
+      title: "Orthopedic Manual Therapy & Registered Massage Therapy",
       description: "Combination of treatments: spine and joint mobilization, soft tissue including fascia, specific stretching, and neurodynamics to restore function and decrease pain.",
       image: manualTherapy
     },
@@ -41,7 +41,7 @@ export const Services = () => {
             Our Approach
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Comprehensive Care Solutions
+            Comprehensive RMT Care Solutions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             For positive long-term results, you need to restore your natural muscle balance. 

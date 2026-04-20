@@ -11,7 +11,7 @@ export const Booking = () => {
             Schedule Your Visit
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Book an Appointment
+            Book an Appointment for Registered Massage Therapy
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             Ready to start your journey to pain-free movement? Click below to schedule your appointment.

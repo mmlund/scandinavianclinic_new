@@ -18,7 +18,7 @@ export const Hero = () => {
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-3xl animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-4 leading-tight">
-            Registered Massage Therapy North Vancouver
+            Registered Massage Therapy in North Vancouver
           </h1>
           <p className="text-2xl md:text-3xl font-semibold text-accent mb-6">
             Active Treatment for an Active Lifestyle

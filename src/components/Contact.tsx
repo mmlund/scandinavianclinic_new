@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Contact = () => {
   return (
@@ -101,7 +102,7 @@ export const Contact = () => {
           
           <Card className="p-8 shadow-card border-0 bg-gradient-to-br from-background to-accent/5 md:col-span-2">
             <h3 className="text-2xl font-bold text-foreground mb-6">
-              Insurance Coverage
+              Insurance Coverage for RMT Treatments
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               As a Registered Massage Therapist, Eva's treatments are covered by most extended 
@@ -112,11 +113,15 @@ export const Contact = () => {
                 What to Bring
               </p>
               <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• Your insurance information</li>
                 <li>• Any relevant medical records or imaging</li>
                 <li>• Comfortable clothing for movement assessment</li>
                 <li>• List of current medications if applicable</li>
               </ul>
+              <p className="mt-4 text-sm">
+                <Link to="/first-visit" className="text-primary font-semibold underline underline-offset-4 hover:text-primary/80">
+                  More about your first visit
+                </Link>
+              </p>
             </div>
           </Card>
         </div>

@@ -8,7 +8,7 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 
 const Hours = () => {
   usePageMeta({
-    title: "Clinic Hours & Booking | Scandinavian Clinic North Vancouver",
+    title: "Clinic Hours & Booking Information | Scandinavian Clinic",
     description:
       "View clinic hours, book an appointment, and find Scandinavian Clinic in North Vancouver. Open Monday, Wednesday, and Thursday.",
     canonical: "https://www.scandinavianclinic.com/hours",

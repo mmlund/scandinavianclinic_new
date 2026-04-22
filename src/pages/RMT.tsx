@@ -21,7 +21,7 @@ import { rmtSchema } from "@/lib/schemas";
 
 const RMT = () => {
   usePageMeta({
-    title: "Registered Massage Therapy (RMT) North Vancouver | Scandinavian Clinic",
+    title: "Registered Massage Therapy North Vancouver | Eva Andersson RMT",
     description:
       "Clinical RMT in North Vancouver focusing on orthopedic assessment and root-cause treatment for chronic pain and sports injuries. Eva Andersson, RMT.",
     canonical: "https://scandinavianclinic.com/r-m-t/",

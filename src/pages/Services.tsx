@@ -47,7 +47,7 @@ const Services = () => {
               Our Services
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-              Clinical Services for Functional Recovery
+              Registered Massage Therapy Services
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
               Moving beyond temporary relief to address the root cause of musculoskeletal pain.

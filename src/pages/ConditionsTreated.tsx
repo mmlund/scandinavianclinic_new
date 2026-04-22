@@ -18,8 +18,7 @@ import bodyMap from "@/assets/conditions-body-map.png";
 
 const ConditionsTreated = () => {
   usePageMeta({
-    title:
-      "Conditions Treated | RMT & Massage Therapy | Scandinavian Clinic, North Vancouver",
+    title: "Conditions Treated with Registered Massage Therapy | North Vancouver",
     description:
       "Comprehensive list of conditions treated with Registered Massage Therapy in North Vancouver, including back pain, neck pain, sports injuries, ICBC claims, and chronic conditions.",
     canonical: "https://scandinavianclinic.com/conditions-treated/",

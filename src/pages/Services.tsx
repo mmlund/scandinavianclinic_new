@@ -19,7 +19,7 @@ import { servicesSchema } from "@/lib/schemas";
 
 const Services = () => {
   usePageMeta({
-    title: "Our Services | RMT & DNS Therapy | Scandinavian Clinic, North Vancouver",
+    title: "Registered Massage Therapy Services North Vancouver | Scandinavian Clinic",
     description:
       "Registered Massage Therapy, Dynamic Neuromuscular Stabilization (DNS) & orthopedic rehabilitation services at Scandinavian Clinic in North Vancouver.",
     canonical: "https://scandinavianclinic.com/services/",

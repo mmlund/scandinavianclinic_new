@@ -9,7 +9,7 @@ import { dnsSchema } from "@/lib/schemas";
 
 const DNS = () => {
   usePageMeta({
-    title: "DNS & Massage Therapy | Scandinavian Clinic North Vancouver",
+    title: "Dynamic Neuromuscular Stabilization (DNS) Therapy | North Vancouver RMT",
     description:
       "Scandinavian Clinic integrates Dynamic Neuromuscular Stabilization (DNS) principles into Registered Massage Therapy in North Vancouver. For dedicated DNS training, visit DNStrainer.com.",
     canonical: "https://scandinavianclinic.com/d-n-s/",

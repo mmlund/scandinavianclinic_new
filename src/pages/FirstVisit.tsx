@@ -11,7 +11,7 @@ import dnsImage from "@/assets/first-visit-dns-assessment.jpg";
 
 const FirstVisit = () => {
   usePageMeta({
-    title: "Your First Visit | Scandinavian Clinic North Vancouver",
+    title: "What to Expect First RMT Visit | Scandinavian Clinic North Vancouver",
     description:
       "What to expect at your first RMT visit at Scandinavian Clinic. Clinical assessment, what to bring, treatment approach, and clinic policies in North Vancouver.",
     canonical: "https://scandinavianclinic.com/first-visit/",

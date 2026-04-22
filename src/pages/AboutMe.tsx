@@ -20,7 +20,7 @@ import { aboutMeSchema } from "@/lib/schemas";
 
 const AboutMe = () => {
   usePageMeta({
-    title: "About Eva Andersson, RMT | Clinical Orthopedic Manual Therapy North Vancouver",
+    title: "Eva Andersson RMT | 30 Years Clinical Experience in North Vancouver",
     description:
       "Meet Eva Andersson, a Registered Massage Therapist with 30+ years of experience. Clinical focus on orthopedic manual therapy, movement assessment, and root-cause recovery.",
     canonical: "https://scandinavianclinic.com/about-me/",

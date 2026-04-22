@@ -4,6 +4,7 @@ import dnsTreatment from "@/assets/dns-treatment.jpg";
 import preventionVideo from "@/assets/prevention-video.mp4";
 import { Card } from "@/components/ui/card";
 import { Activity, Target, Heart, Stethoscope } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Services = () => {
   const services = [
@@ -16,6 +17,7 @@ export const Services = () => {
     {
       icon: <Activity className="w-8 h-8" />,
       title: "Dynamic Neuromuscular Stabilization",
+      titleHref: "/d-n-s",
       description: "Fast-growing active treatment method for training and pain prevention, rehabilitation and and athletic performance improvement. DNS stabilizes core muscles: diaphragm, pelvic floor, and all parts of the abdominal wall.",
       video: preventionVideo
     },
@@ -82,7 +84,13 @@ export const Services = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-2">
-                  {service.title}
+                  {'titleHref' in service && service.titleHref ? (
+                    <Link to={service.titleHref} className="hover:text-accent transition-colors underline-offset-4 hover:underline">
+                      {service.title}
+                    </Link>
+                  ) : (
+                    service.title
+                  )}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {service.description}
@@ -98,7 +106,11 @@ export const Services = () => {
           </h3>
           <p className="text-lg text-muted-foreground text-center leading-relaxed mb-6">
             Our first step is always to find the root cause of your pain. Treatment is then tailored 
-            to your specific condition and needs. Our goal is to alleviate your pain and prevent it from returning.
+            to your specific{" "}
+            <Link to="/conditions-treated" className="text-accent underline underline-offset-4 hover:text-accent/80 transition-colors">
+              condition
+            </Link>
+            {" "}and needs. Our goal is to alleviate your pain and prevent it from returning.
           </p>
           <p className="text-center text-muted-foreground">
             Whatever your active lifestyle looks like, we want you to enjoy it without the restrictions 

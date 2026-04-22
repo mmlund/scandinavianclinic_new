@@ -37,11 +37,8 @@ const Testimonials = () => {
         <section className="py-20 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 animate-fade-in">
-              <div className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
-                Patient Stories
-              </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                Hear from RMT Patients in North Vancouver
+                Patient Stories from Registered Massage Therapy Clients
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Hear from patients who have experienced lasting pain relief and improved movement

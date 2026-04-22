@@ -24,7 +24,7 @@ const DNS = () => {
       <section className="pt-32 pb-12 bg-gradient-to-b from-secondary/30 to-background">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
-            DNS: Special Registered Massage Therapy interest at the Scandinavian Clinic
+            Dynamic Neuromuscular Stabilization (DNS)
           </h1>
         </div>
       </section>

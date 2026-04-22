@@ -25,7 +25,7 @@ const Hours = () => {
               Clinic Information
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Hours & Booking
+              Clinic Hours and Booking Information
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Plan your visit to Scandinavian Clinic in North Vancouver

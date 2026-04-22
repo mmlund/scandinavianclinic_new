@@ -60,7 +60,7 @@ const Education = () => {
               <GraduationCap className="w-8 h-8" />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Education
+              Education and Clinical Background
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
               Over 30 years of clinical investigation into musculoskeletal pain.

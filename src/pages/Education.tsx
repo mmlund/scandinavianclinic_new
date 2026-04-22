@@ -39,7 +39,15 @@ const Education = () => {
     {
       icon: <Layers className="w-6 h-6" />,
       title: "Integrated Modalities",
-      description: "Manual therapy, DNS, massage, and corrective exercise applied in tandem for cohesive results.",
+      description: (
+        <>
+          Manual therapy,{" "}
+          <Link to="/d-n-s" className="text-accent underline underline-offset-4 hover:text-accent/80 transition-colors">
+            DNS
+          </Link>
+          , massage, and corrective exercise applied in tandem for cohesive results.
+        </>
+      ),
     },
     {
       icon: <Stethoscope className="w-6 h-6" />,

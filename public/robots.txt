@@ -22,4 +22,4 @@ Disallow: /rmt-core2
 Disallow: /backpain
 Disallow: /payment
 
-Sitemap: https://www.scandinavianclinic.com/sitemap.xml
+Sitemap: https://scandinavianclinic.com/sitemap.xml

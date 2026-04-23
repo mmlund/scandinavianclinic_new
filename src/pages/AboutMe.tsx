@@ -23,7 +23,6 @@ const AboutMe = () => {
     title: "Eva Andersson RMT | 30 Years Clinical Experience in North Vancouver",
     description:
       "Meet Eva Andersson, a Registered Massage Therapist with 30+ years of experience. Clinical focus on orthopedic manual therapy, movement assessment, and root-cause recovery.",
-    canonical: "https://scandinavianclinic.com/about-me/",
     jsonLd: aboutMeSchema,
   });
 

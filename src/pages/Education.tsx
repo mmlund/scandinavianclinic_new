@@ -21,7 +21,6 @@ const Education = () => {
     title: "Clinical Education & Background | Eva Andersson RMT",
     description:
       "Eva Andersson, RMT — 28+ years of clinical experience. Integrated Swedish orthopedic training, DNS, and Western medical acupuncture for root-cause recovery.",
-    canonical: "https://scandinavianclinic.com/education/",
     jsonLd: educationSchema,
   });
 

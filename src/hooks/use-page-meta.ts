@@ -8,6 +8,43 @@ interface PageMeta {
 }
 
 const JSON_LD_ID = "page-jsonld";
+const CANONICAL_HOST = "https://scandinavianclinic.com";
+
+const normalizeCanonical = (input?: string): string => {
+  if (typeof window === "undefined") {
+    return input ?? CANONICAL_HOST + "/";
+  }
+  let path: string;
+  if (input) {
+    try {
+      const url = new URL(input, CANONICAL_HOST);
+      path = url.pathname + url.search;
+    } catch {
+      path = input.startsWith("/") ? input : `/${input}`;
+    }
+  } else {
+    path = window.location.pathname + window.location.search;
+  }
+  return `${CANONICAL_HOST}${path}`;
+};
+
+const setCanonical = (href: string) => {
+  let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+  if (!link) {
+    link = document.createElement("link");
+    link.setAttribute("rel", "canonical");
+    document.head.appendChild(link);
+  }
+  link.setAttribute("href", href);
+
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute("content", href);
+};
+
+export const syncCanonicalToCurrentPath = () => {
+  if (typeof window === "undefined") return;
+  setCanonical(normalizeCanonical());
+};
 
 export const usePageMeta = ({ title, description, canonical, jsonLd }: PageMeta) => {
   useEffect(() => {
@@ -18,19 +55,13 @@ export const usePageMeta = ({ title, description, canonical, jsonLd }: PageMeta)
       metaDesc.setAttribute("content", description);
     }
 
-    const link = document.querySelector('link[rel="canonical"]');
-    if (link && canonical) {
-      link.setAttribute("href", canonical);
-    }
+    setCanonical(normalizeCanonical(canonical));
 
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute("content", title);
 
     const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute("content", description);
-
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl && canonical) ogUrl.setAttribute("content", canonical);
 
     // Remove any existing page-specific JSON-LD
     const existing = document.getElementById(JSON_LD_ID);

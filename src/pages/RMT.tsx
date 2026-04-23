@@ -24,7 +24,6 @@ const RMT = () => {
     title: "Registered Massage Therapy North Vancouver | Eva Andersson RMT",
     description:
       "Clinical RMT in North Vancouver focusing on orthopedic assessment and root-cause treatment for chronic pain and sports injuries. Eva Andersson, RMT.",
-    canonical: "https://scandinavianclinic.com/r-m-t/",
     jsonLd: rmtSchema,
   });
 

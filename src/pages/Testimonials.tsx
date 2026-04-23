@@ -26,7 +26,6 @@ const Testimonials = () => {
     title: "RMT Patient Testimonials North Vancouver | Scandinavian Clinic",
     description:
       "Hear from RMT patients in North Vancouver about their recovery from chronic pain, sports injuries, and post-surgical rehabilitation at Scandinavian Clinic.",
-    canonical: "https://www.scandinavianclinic.com/testimonials",
   });
 
   return (

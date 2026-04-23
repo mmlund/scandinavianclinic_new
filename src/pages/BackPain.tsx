@@ -18,7 +18,6 @@ const BackPain = () => {
   usePageMeta({
     title: "Back Pain Treatment | Scandinavian Clinic North Vancouver",
     description: "Specialized back pain treatment with orthopedic manual therapy and DNS training in North Vancouver.",
-    canonical: "https://www.scandinavianclinic.com/backpain"
   });
   const credentials = [
     "5-year Scandinavian post-secondary education and training",

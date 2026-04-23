@@ -17,7 +17,6 @@ const RMTCore3 = () => {
   usePageMeta({
     title: "Sports & Orthopedic Therapy | Scandinavian Clinic North Vancouver",
     description: "Advanced European clinical training in RMT. Assessment-based orthopedic and sports therapy for lasting results in North Vancouver.",
-    canonical: "https://www.scandinavianclinic.com/rmt-core3"
   });
   const goodFit = [
     "Value understanding the cause of your problem",

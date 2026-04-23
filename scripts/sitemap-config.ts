@@ -17,7 +17,7 @@ export interface SitemapRoute {
   changefreq: ChangeFreq;
 }
 
-export const SITE_URL = "https://www.scandinavianclinic.com";
+export const SITE_URL = "https://scandinavianclinic.com";
 
 // Indexable routes only. Excludes: /draft, /payment, /backpain, /rmt-core2,
 // /first-visit (canonical via /conditions-treated), /testimonials duplicate of homepage section,

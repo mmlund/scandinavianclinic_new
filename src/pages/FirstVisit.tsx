@@ -14,7 +14,6 @@ const FirstVisit = () => {
     title: "What to Expect First RMT Visit | Scandinavian Clinic North Vancouver",
     description:
       "What to expect at your first RMT visit at Scandinavian Clinic. Clinical assessment, what to bring, treatment approach, and clinic policies in North Vancouver.",
-    canonical: "https://scandinavianclinic.com/first-visit/",
     jsonLd: firstVisitSchema,
   });
 

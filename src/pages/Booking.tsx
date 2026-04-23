@@ -10,7 +10,6 @@ const Booking = () => {
   usePageMeta({
     title: "Book Your Appointment | Scandinavian Clinic",
     description: "Review booking policies and schedule your orthopedic therapy appointment at Scandinavian Clinic in North Vancouver.",
-    canonical: "https://scandinavianclinic.com/booking/",
     jsonLd: bookingSchema,
   });
 

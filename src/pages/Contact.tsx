@@ -12,7 +12,6 @@ const Contact = () => {
     title: "Contact Scandinavian Clinic | RMT North Vancouver",
     description:
       "Contact Scandinavian Clinic in North Vancouver. Suite 202-101 16th St W. Call (604) 926-4883 or book your RMT appointment online.",
-    canonical: "https://scandinavianclinic.com/contact/",
     jsonLd: contactSchema,
   });
 

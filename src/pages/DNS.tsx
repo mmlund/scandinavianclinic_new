@@ -12,7 +12,6 @@ const DNS = () => {
     title: "Dynamic Neuromuscular Stabilization (DNS) Therapy | North Vancouver RMT",
     description:
       "Scandinavian Clinic integrates Dynamic Neuromuscular Stabilization (DNS) principles into Registered Massage Therapy in North Vancouver. For dedicated DNS training, visit DNStrainer.com.",
-    canonical: "https://scandinavianclinic.com/d-n-s/",
     jsonLd: dnsSchema,
   });
 

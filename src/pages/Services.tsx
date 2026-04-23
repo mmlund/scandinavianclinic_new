@@ -22,7 +22,6 @@ const Services = () => {
     title: "Registered Massage Therapy Services North Vancouver | Scandinavian Clinic",
     description:
       "Registered Massage Therapy, Dynamic Neuromuscular Stabilization (DNS) & orthopedic rehabilitation services at Scandinavian Clinic in North Vancouver.",
-    canonical: "https://scandinavianclinic.com/services/",
     jsonLd: servicesSchema,
   });
 

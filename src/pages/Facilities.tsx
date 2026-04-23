@@ -24,7 +24,6 @@ const Facilities = () => {
     title: "Our Clinical Facility in North Vancouver | Scandinavian Clinic",
     description:
       "Integrated clinical facility for RMT, rehabilitation training, and orthopedic rehabilitation. Located at Liberation Fitness in North Vancouver. Private treatment rooms and full-scale strength equipment.",
-    canonical: "https://scandinavianclinic.com/facilities/",
     jsonLd: facilitiesSchema,
   });
 

@@ -13,7 +13,6 @@ const Index = () => {
   usePageMeta({
     title: "Registered Massage Therapy North Vancouver | Scandinavian Clinic",
     description: "Expert orthopedic manual therapy combining Swedish-trained techniques with active rehabilitation. Specializing in pain treatment, movement optimization, and DNS training in North Vancouver.",
-    canonical: "https://scandinavianclinic.com/",
     jsonLd: homeSchema,
   });
 

@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle2, Activity, Hand, Sparkles, Dumbbell, Search, Award, Shield } from "lucide-react";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import backpainVideo from "@/assets/backpain-video.mp4";
-import dnsVideo from "@/assets/dns-video.mp4";
+import backPainIllustration from "@/assets/back-pain-illustration.png";
 
 const PAGE_URL = "https://scandinavianclinic.com/conditions/back-pain-treatment-north-vancouver";
 
@@ -77,13 +77,6 @@ const BackPainTreatmentNorthVancouver = () => {
 
   const treatments = [
     {
-      icon: Hand,
-      title: "Spinal & Joint Mobilization",
-      subtitle: "Low velocity only",
-      description:
-        "Hands-on manual therapy restores movement to stiff spinal segments. When vertebrae in the lower back lose their normal mobility, surrounding muscles tighten to compensate. Mobilizing these joints reduces muscle guarding and allows normal movement to return.",
-    },
-    {
       icon: Activity,
       title: "Deep Core Reactivation through DNS",
       subtitle: "Dynamic Neuromuscular Stabilization",
@@ -94,10 +87,17 @@ const BackPainTreatmentNorthVancouver = () => {
     },
     {
       icon: Sparkles,
-      title: "Soft Tissue & Fascia Work",
+      title: "Massage, Soft Tissue & Fascia Work",
       subtitle: "Targeted release",
       description:
         "Targeted treatment of muscles that have tightened in response to spinal instability — commonly the quadratus lumborum, hip flexors, and thoracolumbar fascia. Massage and stretching often relieves pain and creates space for proper movement.",
+    },
+    {
+      icon: Hand,
+      title: "Spinal & Joint Mobilization",
+      subtitle: "Low velocity only",
+      description:
+        "Hands-on manual therapy restores movement to stiff spinal segments. When vertebrae in the lower back lose their normal mobility, surrounding muscles tighten to compensate. Mobilizing these joints reduces muscle guarding and allows normal movement to return.",
     },
     {
       icon: Dumbbell,
@@ -283,16 +283,13 @@ const BackPainTreatmentNorthVancouver = () => {
                   </p>
                 </div>
               </div>
-              <div className="relative rounded-2xl overflow-hidden aspect-square shadow-xl">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                >
-                  <source src={dnsVideo} type="video/mp4" />
-                </video>
+              <div className="relative rounded-2xl overflow-hidden aspect-square shadow-xl bg-secondary/30">
+                <img
+                  src={backPainIllustration}
+                  alt="Illustration of back pain anatomy and stabilizing muscles"
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>

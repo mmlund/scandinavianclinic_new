@@ -8,6 +8,7 @@ import { CheckCircle2, Activity, Hand, Sparkles, Dumbbell, Search, Award, Shield
 import { usePageMeta } from "@/hooks/use-page-meta";
 import backpainVideo from "@/assets/backpain-video.mp4";
 import backPainIllustration from "@/assets/back-pain-illustration.png";
+import backPainCausesIllustration from "@/assets/back-pain-causes-illustration.png";
 
 const PAGE_URL = "https://scandinavianclinic.com/conditions/back-pain-treatment-north-vancouver";
 
@@ -184,6 +185,21 @@ const BackPainTreatmentNorthVancouver = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
               Why Your Back Hurts — and Why It Keeps Coming Back
             </h2>
+
+            <figure className="mb-10">
+              <div className="relative overflow-hidden rounded-2xl shadow-card bg-secondary/30 border border-border/40">
+                <img
+                  src={backPainCausesIllustration}
+                  alt="Hand-drawn clinical illustrations of three common back pain presentations: low back stiffness and dysfunction, chronic back pain syndrome, and active back strain with fascia tension."
+                  loading="lazy"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center italic">
+                Three common back pain presentations we assess and treat — each requiring a different approach.
+              </figcaption>
+            </figure>
+
             <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
                 Persistent back pain can be caused by many factors requiring a highly individualized approach. Massage is often a great treatment. But often pain develops from how your body has learned to move — or stopped moving — over time. Muscles that should stabilize your spine stop doing their job, and other muscles compensate. That compensation creates strain, stiffness, and eventually pain. It may create a complex pattern that has to be addressed systematically and stepwise where massage is just one component.

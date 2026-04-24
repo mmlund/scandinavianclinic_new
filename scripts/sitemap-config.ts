@@ -37,6 +37,7 @@ export const SITEMAP_ROUTES: SitemapRoute[] = [
   { path: "/conditions/tennis-elbow-treatment-north-vancouver", priority: 0.9, changefreq: "monthly" },
   { path: "/conditions/headaches-treatment-north-vancouver", priority: 0.9, changefreq: "monthly" },
   { path: "/conditions/shoulder-injury-treatment-north-vancouver", priority: 0.9, changefreq: "monthly" },
+  { path: "/conditions/hip-pain-treatment-north-vancouver", priority: 0.9, changefreq: "monthly" },
 
   // Local SEO landing pages
   { path: "/rmt-core1", priority: 0.8, changefreq: "monthly" },

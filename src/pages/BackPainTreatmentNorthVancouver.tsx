@@ -264,9 +264,8 @@ const BackPainTreatmentNorthVancouver = () => {
               </ul>
               <p>
                 Back pain that radiates down the leg may indicate nerve involvement — see our{" "}
-                {/* TODO: Replace with /conditions/sciatica-treatment-north-vancouver once that page exists */}
-                <Link to="/conditions-treated" className="text-primary underline underline-offset-4 hover:text-accent">
-                  sciatica information
+                <Link to="/conditions/sciatica-treatment-north-vancouver" className="text-primary underline underline-offset-4 hover:text-accent">
+                  sciatica treatment page
                 </Link>{" "}
                 for nerve-related leg pain.
               </p>

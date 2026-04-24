@@ -19,53 +19,102 @@ const BackPainTreatmentNorthVancouver = () => {
     title: "Back Pain Treatment in North Vancouver | Scandinavian Clinic",
     description:
       "Assessment-based back pain treatment in North Vancouver. Swedish-trained RMT specializing in spinal mobilization, core stabilization, DNS, and lasting pain relief. Most insurance accepted.",
-    jsonLd: [
-      {
-        "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
-        name: "Scandinavian Clinic",
-        url: "https://scandinavianclinic.com",
-        telephone: "+1-604-926-4883",
-        email: "info@scandinavianclinic.com",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Suite 202 – 101 West 16th Street",
-          addressLocality: "North Vancouver",
-          addressRegion: "BC",
-          postalCode: "V7M 1T3",
-          addressCountry: "CA",
-        },
-        areaServed: {
-          "@type": "City",
-          name: "North Vancouver",
-        },
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: ["Monday", "Wednesday", "Thursday"],
-            opens: "08:00",
-            closes: "17:00",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalBusiness",
+          "@id": "https://scandinavianclinic.com/#business",
+          name: "Scandinavian Clinic",
+          url: "https://scandinavianclinic.com",
+          telephone: "+1-604-926-4883",
+          email: "info@scandinavianclinic.com",
+          priceRange: "$$",
+          image: "https://scandinavianclinic.com/og-image.jpg",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Suite 202, 101 West 16th Street",
+            addressLocality: "North Vancouver",
+            addressRegion: "BC",
+            postalCode: "V7M 1T3",
+            addressCountry: "CA",
           },
-        ],
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "MedicalWebPage",
-        name: "Back Pain Treatment in North Vancouver",
-        url: PAGE_URL,
-        description:
-          "Assessment-based back pain treatment in North Vancouver using Swedish-trained orthopedic manual therapy and DNS.",
-        about: {
-          "@type": "MedicalCondition",
-          name: "Back Pain",
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 49.3231,
+            longitude: -123.0726,
+          },
+          openingHoursSpecification: [
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "08:00", closes: "17:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "08:00", closes: "17:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Thursday", opens: "08:00", closes: "17:00" },
+          ],
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Clinical RMT Services",
+            itemListElement: [
+              { "@type": "Offer", itemOffered: { "@type": "MedicalTherapy", name: "Registered Massage Therapy", alternateName: "RMT" } },
+              { "@type": "Offer", itemOffered: { "@type": "MedicalTherapy", name: "Orthopedic Manual Therapy" } },
+              { "@type": "Offer", itemOffered: { "@type": "MedicalTherapy", name: "Dynamic Neuromuscular Stabilization", alternateName: "DNS" } },
+            ],
+          },
+          medicalSpecialty: "Musculoskeletal",
+          areaServed: {
+            "@type": "City",
+            name: "North Vancouver",
+            containedInPlace: { "@type": "AdministrativeArea", name: "British Columbia" },
+          },
+          isAcceptingNewPatients: true,
+          potentialAction: {
+            "@type": "ReserveAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: "https://scandinavianclinic.com/booking",
+              actionPlatform: "http://schema.org/DesktopWebPlatform",
+            },
+            result: { "@type": "Reservation", name: "Book an RMT Appointment" },
+          },
         },
-        audience: {
-          "@type": "MedicalAudience",
-          audienceType: "Adults seeking treatment for persistent or recurring back pain",
+        {
+          "@type": "MedicalWebPage",
+          "@id": PAGE_URL,
+          name: "Back Pain Treatment in North Vancouver",
+          description:
+            "Clinical RMT treatment for back pain in North Vancouver. Assessment-based Registered Massage Therapy combining spinal mobilization, core stabilization, and active rehab.",
+          url: PAGE_URL,
+          lastReviewed: today,
+          mainEntity: {
+            "@type": "MedicalCondition",
+            name: "Back Pain",
+            alternateName: "Low Back Pain",
+            associatedAnatomy: {
+              "@type": "AnatomicalStructure",
+              name: "Lumbar Spine",
+            },
+            signOrSymptom: [
+              { "@type": "MedicalSignOrSymptom", name: "Lower back stiffness" },
+              { "@type": "MedicalSignOrSymptom", name: "Pain when bending or lifting" },
+              { "@type": "MedicalSignOrSymptom", name: "Difficulty standing after sitting" },
+            ],
+            possibleTreatment: [
+              { "@type": "MedicalTherapy", name: "Registered Massage Therapy", alternateName: "RMT" },
+              { "@type": "MedicalTherapy", name: "Spinal and Joint Mobilization" },
+              { "@type": "MedicalTherapy", name: "Dynamic Neuromuscular Stabilization" },
+            ],
+          },
+          about: { "@type": "MedicalCondition", name: "Back Pain" },
+          provider: { "@id": "https://scandinavianclinic.com/#business" },
         },
-        lastReviewed: today,
-      },
-    ],
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://scandinavianclinic.com/" },
+            { "@type": "ListItem", position: 2, name: "Conditions", item: "https://scandinavianclinic.com/conditions" },
+            { "@type": "ListItem", position: 3, name: "Back Pain Treatment" },
+          ],
+        },
+      ],
+    },
   });
 
   const symptoms = [

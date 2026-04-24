@@ -31,6 +31,7 @@ import SciaticaTreatmentNorthVancouver from "./pages/SciaticaTreatmentNorthVanco
 import NeckPainTreatmentNorthVancouver from "./pages/NeckPainTreatmentNorthVancouver";
 import TennisElbowTreatmentNorthVancouver from "./pages/TennisElbowTreatmentNorthVancouver";
 import HeadachesTreatmentNorthVancouver from "./pages/HeadachesTreatmentNorthVancouver";
+import ShoulderInjuryTreatmentNorthVancouver from "./pages/ShoulderInjuryTreatmentNorthVancouver";
 
 const queryClient = new QueryClient();
 
@@ -83,6 +84,7 @@ const App = () => (
           <Route path="/conditions/neck-pain-treatment-north-vancouver" element={<NeckPainTreatmentNorthVancouver />} />
           <Route path="/conditions/tennis-elbow-treatment-north-vancouver" element={<TennisElbowTreatmentNorthVancouver />} />
           <Route path="/conditions/headaches-treatment-north-vancouver" element={<HeadachesTreatmentNorthVancouver />} />
+          <Route path="/conditions/shoulder-injury-treatment-north-vancouver" element={<ShoulderInjuryTreatmentNorthVancouver />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

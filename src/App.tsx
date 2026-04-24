@@ -26,6 +26,7 @@ import FirstVisit from "./pages/FirstVisit";
 import Education from "./pages/Education";
 import NotFound from "./pages/NotFound";
 import Draft from "./pages/Draft";
+import BackPainTreatmentNorthVancouver from "./pages/BackPainTreatmentNorthVancouver";
 
 const queryClient = new QueryClient();
 
@@ -73,6 +74,7 @@ const App = () => (
           <Route path="/first-visit" element={<FirstVisit />} />
           <Route path="/education" element={<Education />} />
           <Route path="/draft" element={<Draft />} />
+          <Route path="/conditions/back-pain-treatment-north-vancouver" element={<BackPainTreatmentNorthVancouver />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -197,7 +197,7 @@ const TennisElbowTreatmentNorthVancouver = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={tennisElbowHero}
-              alt="Woman seated at a desk gently holding the outside of her elbow, indicating tennis elbow discomfort."
+              alt="Woman in a workshop wincing and holding her elbow while using a power drill — a common real-world scenario for tennis elbow from repetitive gripping."
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/40" />
@@ -237,13 +237,13 @@ const TennisElbowTreatmentNorthVancouver = () => {
               <div className="relative overflow-hidden rounded-2xl shadow-card bg-secondary/30 border border-border/40">
                 <img
                   src={tennisElbowIllustration}
-                  alt="Minimal hand-drawn editorial sketch of a tennis racket resting next to a ceramic cup — referencing tennis elbow as a repetitive strain injury affecting both sport and everyday gripping tasks."
+                  alt="Hand-drawn anatomical sketch on a napkin showing a person gripping their elbow in pain, with annotations indicating lateral epicondyle pain and radiating forearm pain."
                   loading="lazy"
                   className="w-full h-auto object-cover"
                 />
               </div>
               <figcaption className="mt-3 text-sm text-muted-foreground text-center italic">
-                Tennis elbow affects anyone who grips repeatedly — from racquet sports to a morning cup of coffee.
+                Tennis elbow: pain at the lateral epicondyle that radiates down the forearm extensors.
               </figcaption>
             </figure>
 

@@ -77,6 +77,13 @@ const BackPainTreatmentNorthVancouver = () => {
 
   const treatments = [
     {
+      icon: Sparkles,
+      title: "Massage, Soft Tissue & Fascia Work",
+      subtitle: "Targeted release",
+      description:
+        "Targeted treatment of muscles that have tightened in response to spinal instability — commonly the quadratus lumborum, hip flexors, and thoracolumbar fascia. Massage and stretching often relieves pain and creates space for proper movement.",
+    },
+    {
       icon: Activity,
       title: "Deep Core Reactivation through DNS",
       subtitle: "Dynamic Neuromuscular Stabilization",
@@ -84,13 +91,6 @@ const BackPainTreatmentNorthVancouver = () => {
         "Many back pain patients have lost the ability to properly activate their deep stabilizing muscles — the diaphragm, pelvic floor, and deep abdominal wall. We retrain these muscles to stabilize your spine from the inside. Fundamentally different from crunches or planks, which often reinforce the compensation patterns causing your pain.",
       link: "/d-n-s",
       linkLabel: "Learn more about DNS",
-    },
-    {
-      icon: Sparkles,
-      title: "Massage, Soft Tissue & Fascia Work",
-      subtitle: "Targeted release",
-      description:
-        "Targeted treatment of muscles that have tightened in response to spinal instability — commonly the quadratus lumborum, hip flexors, and thoracolumbar fascia. Massage and stretching often relieves pain and creates space for proper movement.",
     },
     {
       icon: Hand,

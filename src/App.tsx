@@ -28,6 +28,7 @@ import NotFound from "./pages/NotFound";
 import Draft from "./pages/Draft";
 import BackPainTreatmentNorthVancouver from "./pages/BackPainTreatmentNorthVancouver";
 import SciaticaTreatmentNorthVancouver from "./pages/SciaticaTreatmentNorthVancouver";
+import NeckPainTreatmentNorthVancouver from "./pages/NeckPainTreatmentNorthVancouver";
 
 const queryClient = new QueryClient();
 

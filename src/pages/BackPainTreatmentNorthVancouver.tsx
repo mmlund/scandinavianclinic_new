@@ -283,16 +283,13 @@ const BackPainTreatmentNorthVancouver = () => {
                   </p>
                 </div>
               </div>
-              <div className="relative rounded-2xl overflow-hidden aspect-square shadow-xl">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                >
-                  <source src={dnsVideo} type="video/mp4" />
-                </video>
+              <div className="relative rounded-2xl overflow-hidden aspect-square shadow-xl bg-secondary/30">
+                <img
+                  src={backPainIllustration}
+                  alt="Illustration of back pain anatomy and stabilizing muscles"
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>

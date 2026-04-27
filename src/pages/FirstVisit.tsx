@@ -11,9 +11,9 @@ import dnsImage from "@/assets/first-visit-dns-assessment.jpg";
 
 const FirstVisit = () => {
   usePageMeta({
-    title: "What to Expect First RMT Visit | Scandinavian Clinic North Vancouver",
+    title: "First Visit Biomechanical Assessment – RMT North Vancouver | Scandinavian Clinic",
     description:
-      "What to expect at your first RMT visit at Scandinavian Clinic. Clinical assessment, what to bring, treatment approach, and clinic policies in North Vancouver.",
+      "Your first visit includes a detailed health history, symptom review, and a hands-on biomechanical assessment to identify the root cause of pain and dysfunction. This clinical approach allows precise treatment planning and faster recovery.",
     jsonLd: firstVisitSchema,
   });
 

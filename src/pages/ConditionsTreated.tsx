@@ -168,7 +168,7 @@ const ConditionsTreated = () => {
                 Registered Massage Therapy · North Vancouver
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-                Conditions Treated with Registered Massage Therapy
+                Conditions We Treat
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
                 At Scandinavian Clinic, we use Registered Massage Therapy to address a

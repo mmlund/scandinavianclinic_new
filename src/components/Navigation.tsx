@@ -66,7 +66,37 @@ export const Navigation = () => {
             </DropdownMenu>
             <Link to="/services" className="text-foreground hover:text-primary transition-colors font-medium">Services</Link>
             <Link to="/first-visit" className="text-foreground hover:text-primary transition-colors font-medium">First Visit</Link>
-            <Link to="/conditions-treated" className="text-foreground hover:text-primary transition-colors font-medium">Conditions</Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-medium focus:outline-none">
+                Conditions <ChevronDown size={16} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="bg-background z-50">
+                <DropdownMenuItem asChild>
+                  <Link to="/conditions-treated">Conditions Treated</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/conditions/back-pain-treatment-north-vancouver">Back Pain</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/conditions/sciatica-treatment-north-vancouver">Sciatica</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/conditions/neck-pain-treatment-north-vancouver">Neck Pain</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/conditions/tennis-elbow-treatment-north-vancouver">Tennis Elbow</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/conditions/headaches-treatment-north-vancouver">Headaches</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/conditions/shoulder-injury-treatment-north-vancouver">Shoulder Injury</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/conditions/hip-pain-treatment-north-vancouver">Hip Pain</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Link to="/facilities" className="text-foreground hover:text-primary transition-colors font-medium">Facilities</Link>
             <Link to="/r-m-t" className="text-foreground hover:text-primary transition-colors font-medium">RMT</Link>
             <Link to="/d-n-s" className="text-foreground hover:text-primary transition-colors font-medium">DNS</Link>
@@ -107,6 +137,13 @@ export const Navigation = () => {
               <Link to="/services" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Services</Link>
               <Link to="/first-visit" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">First Visit</Link>
               <Link to="/conditions-treated" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Conditions</Link>
+              <Link to="/conditions/back-pain-treatment-north-vancouver" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Back Pain</Link>
+              <Link to="/conditions/sciatica-treatment-north-vancouver" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Sciatica</Link>
+              <Link to="/conditions/neck-pain-treatment-north-vancouver" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Neck Pain</Link>
+              <Link to="/conditions/tennis-elbow-treatment-north-vancouver" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Tennis Elbow</Link>
+              <Link to="/conditions/headaches-treatment-north-vancouver" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Headaches</Link>
+              <Link to="/conditions/shoulder-injury-treatment-north-vancouver" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Shoulder Injury</Link>
+              <Link to="/conditions/hip-pain-treatment-north-vancouver" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Hip Pain</Link>
               <Link to="/facilities" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Facilities</Link>
               <Link to="/r-m-t" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">RMT</Link>
               <Link to="/d-n-s" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">DNS</Link>

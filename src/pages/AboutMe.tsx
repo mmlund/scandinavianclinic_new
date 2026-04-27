@@ -72,7 +72,7 @@ const AboutMe = () => {
                 North Vancouver · Eva Andersson, RMT
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-                About Eva Andersson, RMT
+                About Eva Andersson, RMT – Clinical Insight & Experience
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed font-light">
                 Clinical Insight. 30 Years of Experience. Root-Cause Recovery.

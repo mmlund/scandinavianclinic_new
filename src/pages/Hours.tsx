@@ -8,9 +8,9 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 
 const Hours = () => {
   usePageMeta({
-    title: "Clinic Hours & Booking Information | Scandinavian Clinic",
+    title: "Clinic Hours & Appointments – RMT North Vancouver | Scandinavian Clinic",
     description:
-      "View clinic hours, book an appointment, and find Scandinavian Clinic in North Vancouver. Open Monday, Wednesday, and Thursday.",
+      "View current clinic hours and booking information for registered massage therapy at the Scandinavian Clinic in North Vancouver. Learn how appointments work and what to expect when scheduling your visit.",
   });
 
   return (
@@ -24,7 +24,7 @@ const Hours = () => {
               Clinic Information
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Clinic Hours and Booking Information
+              Clinic Hours & Booking Information
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Plan your visit to Scandinavian Clinic in North Vancouver

@@ -11,8 +11,8 @@ import { homeSchema } from "@/lib/schemas";
 
 const Index = () => {
   usePageMeta({
-    title: "Registered Massage Therapy North Vancouver | Scandinavian Clinic",
-    description: "Expert orthopedic manual therapy combining Swedish-trained techniques with active rehabilitation. Specializing in pain treatment, movement optimization, and DNS training in North Vancouver.",
+    title: "Registered Massage Therapy in North Vancouver – Clinical Treatment & Root-Cause Recovery | Scandinavian Clinic",
+    description: "Clinical registered massage therapy in North Vancouver focused on assessment, root-cause treatment, and long-term recovery. Biomechanical analysis, corrective exercise, and hands-on treatment for pain, injury, and dysfunction.",
     jsonLd: homeSchema,
   });
 

@@ -18,9 +18,9 @@ import bodyMap from "@/assets/conditions-body-map.png";
 
 const ConditionsTreated = () => {
   usePageMeta({
-    title: "Conditions Treated with Registered Massage Therapy | North Vancouver",
+    title: "Back, Neck, Shoulder, Elbow, Foot, Arm, & Hip Pain Treatment – RMT North Vancouver | Scandinavian Clinic",
     description:
-      "Comprehensive list of conditions treated with Registered Massage Therapy in North Vancouver, including back pain, neck pain, sports injuries, ICBC claims, and chronic conditions.",
+      "Treatment for back pain, neck pain, shoulder injuries, hip dysfunction, postural strain, tennis elbow, sports injuries, and chronic pain through detailed assessment and clinical registered massage therapy in North Vancouver.",
     jsonLd: conditionsTreatedSchema,
   });
 

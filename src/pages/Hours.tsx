@@ -8,9 +8,9 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 
 const Hours = () => {
   usePageMeta({
-    title: "Clinic Hours & Booking Information | Scandinavian Clinic",
+    title: "Clinic Hours & Appointments – RMT North Vancouver | Scandinavian Clinic",
     description:
-      "View clinic hours, book an appointment, and find Scandinavian Clinic in North Vancouver. Open Monday, Wednesday, and Thursday.",
+      "View current clinic hours and booking information for registered massage therapy at the Scandinavian Clinic in North Vancouver. Learn how appointments work and what to expect when scheduling your visit.",
   });
 
   return (

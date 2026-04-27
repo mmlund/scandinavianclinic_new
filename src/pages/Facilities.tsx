@@ -61,7 +61,7 @@ const Facilities = () => {
               Our Facility
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-              Our Clinical Facility
+              Our Clinical Facility in North Vancouver
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
               A hybrid environment for manual therapy and active rehabilitation.

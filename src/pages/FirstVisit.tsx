@@ -30,7 +30,7 @@ const FirstVisit = () => {
                 What to Expect
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                What to Expect on Your First Visit
+                What to Expect at Your First Visit
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 A systematic investigation into your movement and pain.

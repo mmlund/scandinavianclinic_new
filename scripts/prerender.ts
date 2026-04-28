@@ -76,6 +76,11 @@ async function main() {
   try {
     const page = await browser.newPage();
     
+    // Inject flag so React app knows it's being prerendered (bypasses main.tsx host checks)
+    await page.evaluateOnNewDocument(() => {
+      (window as any).__PRERENDERING = true;
+    });
+
     // Capture browser console logs to debug React mounting issues
     page.on('console', msg => console.log('BROWSER LOG:', msg.text()));
     page.on('pageerror', err => console.error('BROWSER ERROR:', err.message));

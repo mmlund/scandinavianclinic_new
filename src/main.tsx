@@ -10,6 +10,7 @@ import "./index.css";
 const CANONICAL_HOST = "scandinavianclinic.com";
 
 const isCanonicalHost = (hostname: string): boolean => {
+  if (typeof window !== "undefined" && (window as any).__PRERENDERING) return true;
   return hostname === CANONICAL_HOST || hostname === `www.${CANONICAL_HOST}`;
 };
 

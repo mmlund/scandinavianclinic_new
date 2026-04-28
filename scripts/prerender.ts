@@ -25,9 +25,11 @@ const MIME_TYPES: Record<string, string> = {
 
 // Simple static file server with SPA fallback
 const server = createServer(async (req, res) => {
-  let filePath = join(DIST_DIR, req.url === '/' ? 'index.html' : req.url || '');
-  
   try {
+    const parsedUrl = new URL(req.url || '/', `http://localhost:${PORT}`);
+    let reqPath = parsedUrl.pathname;
+    let filePath = join(DIST_DIR, reqPath === '/' ? 'index.html' : reqPath);
+    
     let fileStat = await stat(filePath).catch(() => null);
     
     // SPA Fallback
@@ -73,6 +75,13 @@ async function main() {
 
   try {
     const page = await browser.newPage();
+    
+    // Capture browser console logs to debug React mounting issues
+    page.on('console', msg => console.log('BROWSER LOG:', msg.text()));
+    page.on('pageerror', err => console.error('BROWSER ERROR:', err.message));
+    page.on('requestfailed', request => {
+      console.error(`BROWSER NETWORK ERROR: ${request.url()} - ${request.failure()?.errorText}`);
+    });
 
     for (const route of routesToRender) {
       console.log(`Prerendering ${route}...`);
@@ -101,8 +110,8 @@ async function main() {
         await fs.writeFile(join(targetDir, 'index.html'), html);
         
         console.log(`  ✓ Success: ${route}`);
-      } catch (err) {
-        console.error(`  ✗ Failed: ${route}`, err);
+      } catch (err: any) {
+        console.error(`  ✗ Failed: ${route}`, err.message);
       }
     }
   } finally {

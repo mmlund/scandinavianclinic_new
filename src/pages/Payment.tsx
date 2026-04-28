@@ -1,7 +1,13 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const Payment = () => {
+  usePageMeta({
+    title: "Payment | Scandinavian Clinic",
+    description: "Payment information for Scandinavian Clinic.",
+    noindex: true,
+  });
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

@@ -1,65 +1,40 @@
-
-
 ## Goal
-Create a new SEO-optimized landing page at `/conditions/back-pain-treatment-north-vancouver` using the provided clinical copy, attach proper schema markup, and include the URL in the sitemap.
 
-## What Will Be Built
+Make sure I (and every future Lovable session) reliably remember that your prerender pipeline is off-limits, without you having to re-explain it each time.
 
-### 1. New page: `src/pages/BackPainTreatmentNorthVancouver.tsx`
-A clean, conversion-focused landing page following the clinic's Scandinavian visual style. Sections:
+## How Lovable's memory works (short version)
 
-- **Hero** — H1: "Back Pain Treatment in North Vancouver" (only H1 on page), intro paragraph, primary CTA → `/booking` (per booking-flow rule, this routes through the policy gate).
-- **Your Back Pain** — narrative intro about how back pain disrupts daily life (shoes, meetings, North Shore hikes).
-- **Understanding Back Pain** — H2 + H3 "Why Your Back Hurts — and Why It Keeps Coming Back", symptoms list, when-to-seek-treatment callout. Includes placeholder internal link to `/conditions/sciatica-treatment-north-vancouver` (inactive — rendered as a styled `<Link>` that currently routes to `/conditions-treated` so it doesn't 404, with a TODO comment for the future sciatica page).
-- **How We Treat Back Pain** — Cards/blocks for: Spinal & Joint Mobilization (low velocity), Deep Core Reactivation through DNS (links to `/d-n-s`), Soft Tissue & Fascia Work, Active Rehabilitation.
-- **What to Expect** — Path from pain to function (60-min sessions, 3–6 sessions typical, home-practice emphasis).
-- **Why Scandinavian Clinic** — Bullet list with link to `/d-n-s` from the DNS bullet.
-- **Schedule Your Visit** — CTA section → `/booking`.
-- **Contact & Location** — Reuses existing `<Contact />` component (already has address, phone, hours).
-- Standard `<Navigation />` and `<Footer />`.
+- Project memory lives at `mem://`. The index file (`mem://index.md`) is **always loaded into context** at the start of every session.
+- "Core" rules in the index are one-liners applied to every action.
+- Detailed rules live in linked memory files and are read on demand when relevant (e.g., when I'm about to touch `package.json` or `src/main.tsx`).
+- Memory survives across sessions and across chat history summarization — it's the right place for durable rules like this.
 
-Visual treatment: matches existing clinical pages (`BackPain.tsx`, `RMTCore3.tsx`) — soft palette, no spinal-manipulation imagery, prefer existing video assets (e.g. `dnsVideo`, `backpainVideo`) where appropriate. No spa/reassurance language.
+## What I'll save
 
-### 2. SEO meta via `usePageMeta`
-- **Title:** `Back Pain Treatment in North Vancouver | Scandinavian Clinic`
-- **Description:** `Assessment-based back pain treatment in North Vancouver. Swedish-trained RMT specializing in spinal mobilization, core stabilization, DNS, and lasting pain relief. Most insurance accepted.`
-- **Canonical:** auto-derived as `https://scandinavianclinic.com/conditions/back-pain-treatment-north-vancouver` (handled by the existing global canonical sync — no override needed).
+**1. Add a Core line to `mem://index.md`** (always in context):
 
-### 3. JSON-LD schema (passed via `usePageMeta`'s `jsonLd`)
-Two combined schemas:
+> Off-limits: Do NOT edit `scripts/prerender.ts`, the `__PRERENDERING` bypass in `src/main.tsx`, or the `prerender`/`build:prod` scripts and `puppeteer`/`serve`/`tsx` deps in package.json. See Prerender Pipeline memory.
 
-- **MedicalBusiness** — name, address (Suite 202–101 West 16th Street, North Vancouver, BC V7M 1T3), phone (604) 926-4883, email, opening hours (Mon/Wed/Thu 08:00–17:00), URL, areaServed: North Vancouver.
-- **MedicalWebPage** — `name`, `url`, `description`, `about` → `MedicalCondition` "Back Pain", `audience` → adults seeking back pain treatment, `lastReviewed` set to today.
+**2. Create `mem://project/prerender-pipeline.md`** (constraint type) with the full detail:
 
-### 4. Routing
-Add to `src/App.tsx`:
-```tsx
-import BackPainTreatmentNorthVancouver from "./pages/BackPainTreatmentNorthVancouver";
-...
-<Route path="/conditions/back-pain-treatment-north-vancouver" element={<BackPainTreatmentNorthVancouver />} />
-```
-Placed above the catch-all `*` route.
+- **Off-limits files**: `scripts/prerender.ts`; the `(window as any).__PRERENDERING` check inside `isCanonicalHost` in `src/main.tsx` (rest of `main.tsx` remains editable, but that bypass must be preserved).
+- **Off-limits package.json items**: devDependencies `puppeteer`, `serve`, `tsx`; scripts `prerender` and `build:prod`.
+- **Safe**: standard `build` script (`vite build`) is clean and used for previews.
+- **Why**: the prerender pipeline runs only in your separate production deploy and is decoupled from Lovable's preview build; touching these would break your prod pipeline.
+- **How to apply**: before any edit to `src/main.tsx`, `package.json`, or files under `scripts/`, verify the change doesn't touch the protected items.
 
-### 5. Sitemap update
-Edit `scripts/sitemap-config.ts`:
-- Add `{ path: "/conditions/back-pain-treatment-north-vancouver", priority: 0.9, changefreq: "monthly" }` under "Primary service / treatment pages".
+**3. Link it from the index** under `## Memories` so future sessions can find it by topic.
 
-Edit `scripts/generate-sitemap.ts`:
-- Add the new route to the `map` so its `lastmod` reflects the new page file's mtime:
-  ```ts
-  "/conditions/back-pain-treatment-north-vancouver": ["src/pages/BackPainTreatmentNorthVancouver.tsx"],
-  ```
+## What this guarantees
 
-Regenerate `public/sitemap.xml` so it includes the new `<url>` block (apex domain, today's lastmod, 0.9 priority, monthly changefreq).
+- Every new session sees the Core off-limits line immediately — no need to re-explain.
+- When I'm about to edit `package.json`, `main.tsx`, or anything in `scripts/`, the linked detailed memory tells me exactly what to leave alone.
+- If you later add more protected files/scripts, just tell me and I'll append them to the same memory file.
 
-### 6. Files Edited / Created
-- **Created:** `src/pages/BackPainTreatmentNorthVancouver.tsx`
-- **Edited:** `src/App.tsx` (route registration)
-- **Edited:** `scripts/sitemap-config.ts` (new sitemap entry)
-- **Edited:** `scripts/generate-sitemap.ts` (lastmod mapping)
-- **Regenerated:** `public/sitemap.xml`
+## Extra suggestion (optional)
 
-### Notes
-- The provided sciatica link (`/conditions/sciatica-treatment-north-vancouver`) does not yet exist — it will render as a styled link pointing to `/conditions-treated` for now, with a code comment marking it as a placeholder for the future sciatica page so it doesn't 404.
-- Existing `/backpain` page is unchanged and remains excluded from the sitemap (per existing crawling policy).
+If you want a belt-and-suspenders signal that's visible in the repo itself (not just memory), I can also add a short `scripts/README.md` noting "this directory is owned by the user's production pipeline; Lovable should not modify." Memory alone is sufficient, but a repo-level note helps if you ever onboard another tool or collaborator. Let me know if you want this included.
 
+## Next step
+
+Approve this plan and I'll write both memory files in one go. No app code changes.

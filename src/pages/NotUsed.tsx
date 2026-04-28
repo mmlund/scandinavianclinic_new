@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
@@ -13,6 +14,12 @@ import correctiveFocus from "@/assets/corrective-focus.jpg";
 import educationExplanation from "@/assets/education-explanation.jpg";
 
 const RMTCore2 = () => {
+  usePageMeta({
+    title: "Test Page | Scandinavian Clinic",
+    description: "Internal test page — not for public indexing.",
+    noindex: true,
+  });
+
   const commonPhrases = [
     "Your muscles are tight",
     "You need more sessions",

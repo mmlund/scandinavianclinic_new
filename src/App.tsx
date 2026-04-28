@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { initTracking, sendTrackingData } from "@/lib/tracking";
-import { syncCanonicalToCurrentPath } from "@/hooks/use-page-meta";
+
 import Index from "./pages/Index";
 import RMTCore1 from "./pages/RMTCore1";
 import RMT from "./pages/RMT";
@@ -44,9 +44,9 @@ function TrackingInit() {
   }, []);
 
   useEffect(() => {
-    // Keep canonical tag in sync with the current route
-    syncCanonicalToCurrentPath();
-    // Re-fire page_view on client-side navigation
+    // Re-fire page_view on client-side navigation.
+    // Canonicals are set per-page by usePageMeta — never auto-synced here,
+    // so unknown/404 routes do not generate self-canonicals.
     sendTrackingData({ event_type: "page_view" });
   }, [location.pathname]);
 

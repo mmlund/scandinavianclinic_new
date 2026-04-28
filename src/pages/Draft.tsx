@@ -9,9 +9,10 @@ import heroEva from "@/assets/hero-eva.jpg";
 
 const Draft = () => {
   usePageMeta({
-    title: "Registered Massage Therapy in North Vancouver | Scandinavian Clinic",
+    title: "Draft | Scandinavian Clinic",
     description:
-      "Registered Massage Therapy in North Vancouver for pain relief, injury rehab, and active recovery. Book with an experienced RMT at Scandinavian Clinic today.",
+      "Internal draft page — not for public indexing.",
+    noindex: true,
   });
 
   return (

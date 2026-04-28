@@ -50,7 +50,26 @@ npm run dev
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
+## SEO Prerendering & Lovable Coordination
+
+This project includes a custom build-time prerendering step to ensure search engines (like Google) and social media platforms can index the fully rendered pages (including dynamic `<title>` and `<meta>` tags set by `usePageMeta`) rather than the empty SPA shell.
+
+### How it works
+1. **Dependencies**: Uses `puppeteer`, `serve`, and `tsx` (added to `devDependencies`).
+2. **Script (`scripts/prerender.ts`)**: A custom Node script that parses `scripts/sitemap-config.ts` (excluding private routes), serves the `dist/` directory locally, and uses a headless browser to visit each route. It waits for the `link[rel="canonical"]` tag to be injected, then saves the fully rendered HTML back to `dist/<route>/index.html`. It also injects a `window.__PRERENDERING` flag to bypass the `src/main.tsx` canonical host security gate.
+3. **Verification**: Prerendered pages will contain `<html data-prerendered="true">` in the source code.
+
+### Coordination with Lovable (IMPORTANT)
+Lovable's preview environment is fast and lightweight, and running a headless Chrome browser (Puppeteer) during Lovable's automated builds is risky and can cause crashes. To prevent this, the prerender step is **decoupled** from the standard build command.
+
+- **`"build": "vite build"`**: This is the standard command used by Lovable. It is fast and *does not* run the prerender script. **Lovable should continue using this script.**
+- **`"build:prod": "vite build && bun run prerender"`**: This is the production build command. It should **only** be used by your production hosting provider (e.g., Render, Vercel, Netlify). 
+
+**Instructions for Lovable AI**: 
+Please leave `scripts/prerender.ts` and the `puppeteer`/`serve`/`tsx` dependencies intact. You may completely ignore the `"prerender"` and `"build:prod"` scripts in `package.json`, as they are intended strictly for the separate production deployment pipeline.
+
 ## What technologies are used for this project?
+
 
 This project is built with:
 

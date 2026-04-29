@@ -23,38 +23,39 @@ const MIME_TYPES: Record<string, string> = {
   '.svg': 'image/svg+xml',
 };
 
+let originalIndexHtml: Buffer | string;
+
 // Simple static file server with SPA fallback
 const server = createServer(async (req, res) => {
   try {
     const parsedUrl = new URL(req.url || '/', `http://localhost:${PORT}`);
     let reqPath = parsedUrl.pathname;
-    let filePath = join(DIST_DIR, reqPath === '/' ? 'index.html' : reqPath);
+    const ext = String(extname(reqPath)).toLowerCase();
     
-    let fileStat = await stat(filePath).catch(() => null);
-    
-    // SPA Fallback
-    if (!fileStat) {
-      filePath = join(DIST_DIR, 'index.html');
-      fileStat = await stat(filePath).catch(() => null);
-    }
-    
-    if (fileStat && fileStat.isDirectory()) {
-      filePath = join(filePath, 'index.html');
-      fileStat = await stat(filePath).catch(() => null);
+    // Always serve the original SPA shell for routes (no extension) or HTML requests.
+    // This prevents Puppeteer from loading a previously prerendered HTML file
+    // (like the overwritten home page), which would cause waitForSelector 
+    // to resolve instantly before React can render the correct route's title.
+    if (!ext || ext === '.html') {
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(originalIndexHtml);
+      return;
     }
 
-    if (!fileStat) {
+    let filePath = join(DIST_DIR, reqPath);
+    let fileStat = await stat(filePath).catch(() => null);
+    
+    if (!fileStat || !fileStat.isFile()) {
       res.writeHead(404);
       res.end('Not found');
       return;
     }
 
     const content = await readFile(filePath);
-    const ext = String(extname(filePath)).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
     
     res.writeHead(200, { 'Content-Type': contentType });
-    res.end(content, 'utf-8');
+    res.end(content);
   } catch (error) {
     res.writeHead(500);
     res.end('Server error');
@@ -62,6 +63,9 @@ const server = createServer(async (req, res) => {
 });
 
 async function main() {
+  console.log('Reading original SPA shell...');
+  originalIndexHtml = await readFile(join(DIST_DIR, 'index.html'));
+
   console.log(`Starting local server on port ${PORT}...`);
   await new Promise<void>((resolve) => {
     server.listen(PORT, () => resolve());

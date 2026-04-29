@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "prerender": "tsx scripts/prerender.ts",
-    "build:prod": "vite build && bun run prerender",
+    "build:prod": "vite build && npm run prerender",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"

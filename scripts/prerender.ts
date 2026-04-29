@@ -110,13 +110,17 @@ async function main() {
 
         html = `<!DOCTYPE html>\n${html}`;
 
-        // Create directory structure if it doesn't exist
-        const routePath = route === '/' ? '' : route;
-        const targetDir = join(DIST_DIR, routePath);
-        await fs.mkdir(targetDir, { recursive: true });
-        
-        // Write the index.html file
-        await fs.writeFile(join(targetDir, 'index.html'), html);
+        if (route === '/') {
+          // Home page overwrites the main index.html
+          await fs.writeFile(join(DIST_DIR, 'index.html'), html);
+        } else {
+          // For other routes (e.g. /facilities), write to facilities.html
+          // This allows Render to serve it as a Clean URL instead of falling back to the SPA rewrite rule.
+          const targetFile = join(DIST_DIR, `${route}.html`);
+          // Ensure directory exists if it's a nested route like /conditions/back-pain
+          await fs.mkdir(resolve(targetFile, '..'), { recursive: true });
+          await fs.writeFile(targetFile, html);
+        }
         
         console.log(`  ✓ Success: ${route}`);
       } catch (err: any) {

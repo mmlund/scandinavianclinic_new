@@ -8,10 +8,12 @@ import fs from 'fs/promises';
 const PORT = 3001;
 const DIST_DIR = resolve(process.cwd(), 'dist');
 const EXCLUDED_ROUTES = ['/payment', '/draft', '/rmt-core2', '/booking', '/404'];
+const EXTRA_ROUTES_TO_PRERENDER = ['/first-visit', '/testimonials', '/backpain'];
 
-const routesToRender = SITEMAP_ROUTES
-  .map(r => r.path)
-  .filter(route => !EXCLUDED_ROUTES.includes(route));
+const routesToRender = [
+  ...SITEMAP_ROUTES.map(r => r.path),
+  ...EXTRA_ROUTES_TO_PRERENDER
+].filter(route => !EXCLUDED_ROUTES.includes(route));
 
 const MIME_TYPES: Record<string, string> = {
   '.html': 'text/html',

@@ -1,40 +1,77 @@
-## Goal
+## Verified findings (no assumptions)
 
-Make sure I (and every future Lovable session) reliably remember that your prerender pipeline is off-limits, without you having to re-explain it each time.
+I checked the actual served HTML on the Lovable published site and the React source. Here is what is actually happening.
 
-## How Lovable's memory works (short version)
+### 1. Home page title — confirmed in source
+`src/pages/Index.tsx` line 14:
+```
+title: "Registered Massage Therapy in North Vancouver – Clinical Treatment & Root-Cause Recovery | Scandinavian Clinic"
+```
+Needs `&` → `and`. Simple text edit.
 
-- Project memory lives at `mem://`. The index file (`mem://index.md`) is **always loaded into context** at the start of every session.
-- "Core" rules in the index are one-liners applied to every action.
-- Detailed rules live in linked memory files and are read on demand when relevant (e.g., when I'm about to touch `package.json` or `src/main.tsx`).
-- Memory survives across sessions and across chat history summarization — it's the right place for durable rules like this.
+### 2. Every page serving the home title — confirmed and root-caused
 
-## What I'll save
+I fetched the published Lovable site for several routes:
 
-**1. Add a Core line to `mem://index.md`** (always in context):
+| URL | Initial HTML `<title>` |
+|---|---|
+| `https://scandi-glow-reboot.lovable.app/` | Home title |
+| `https://scandi-glow-reboot.lovable.app/about-me` | **Home title** |
+| `https://scandi-glow-reboot.lovable.app/services` | **Home title** |
+| `https://scandi-glow-reboot.lovable.app/first-visit` | **Home title** |
+| `https://scandi-glow-reboot.lovable.app/conditions/back-pain-treatment-north-vancouver` | **Home title** |
 
-> Off-limits: Do NOT edit `scripts/prerender.ts`, the `__PRERENDERING` bypass in `src/main.tsx`, or the `prerender`/`build:prod` scripts and `puppeteer`/`serve`/`tsx` deps in package.json. See Prerender Pipeline memory.
+The HTML at `/about-me` has these tell-tale markers:
+- `<html lang="en" data-prerendered="true">` — set only by `scripts/prerender.ts` line 103
+- The `<title>`, `<meta description>`, and `<script id="page-jsonld">` are all the **home** page's values
+- The embedded gtag tracking URL contains `url=http%3A%2F%2Flocalhost%3A3001%2F` — i.e. when this page was prerendered, `window.location.pathname` was `/`, not `/about-me`
 
-**2. Create `mem://project/prerender-pipeline.md`** (constraint type) with the full detail:
+This proves the duplicated title is **not** caused by anything in `src/` — `usePageMeta`, the host-gate in `main.tsx`, the router, and per-page `usePageMeta` calls are all correct. The same titles render correctly on client-side navigation.
 
-- **Off-limits files**: `scripts/prerender.ts`; the `(window as any).__PRERENDERING` check inside `isCanonicalHost` in `src/main.tsx` (rest of `main.tsx` remains editable, but that bypass must be preserved).
-- **Off-limits package.json items**: devDependencies `puppeteer`, `serve`, `tsx`; scripts `prerender` and `build:prod`.
-- **Safe**: standard `build` script (`vite build`) is clean and used for previews.
-- **Why**: the prerender pipeline runs only in your separate production deploy and is decoupled from Lovable's preview build; touching these would break your prod pipeline.
-- **How to apply**: before any edit to `src/main.tsx`, `package.json`, or files under `scripts/`, verify the change doesn't touch the protected items.
+The cause is the **external prerender pipeline** (`scripts/prerender.ts` + the user's production build). It is writing the home page's rendered HTML into `dist/about-me/index.html`, `dist/services/index.html`, etc. The smoking gun is the `localhost:3001/` URL captured inside each prerendered file — Puppeteer rendered `/` for every route iteration, then saved that output under each route's directory.
 
-**3. Link it from the index** under `## Memories` so future sessions can find it by topic.
+### 3. Is anything in Lovable's code causing it? — No, verified
 
-## What this guarantees
+- `src/hooks/use-page-meta.ts` correctly sets `document.title` per page.
+- `src/main.tsx` host-gate only forces `noindex,nofollow` and removes canonicals on non-canonical hosts; it never touches `<title>`.
+- React Router config in `src/App.tsx` correctly maps each path to its own component.
+- On client navigation in the live preview, titles update correctly per route.
 
-- Every new session sees the Core off-limits line immediately — no need to re-explain.
-- When I'm about to edit `package.json`, `main.tsx`, or anything in `scripts/`, the linked detailed memory tells me exactly what to leave alone.
-- If you later add more protected files/scripts, just tell me and I'll append them to the same memory file.
+There is no fallback or override in our code that would replace per-page titles. The bad titles only appear in the **initial server-delivered HTML**, which is produced by the user's own prerender step.
 
-## Extra suggestion (optional)
+### 4. About the prerender pipeline (off-limits per memory)
 
-If you want a belt-and-suspenders signal that's visible in the repo itself (not just memory), I can also add a short `scripts/README.md` noting "this directory is owned by the user's production pipeline; Lovable should not modify." Memory alone is sufficient, but a repo-level note helps if you ever onboard another tool or collaborator. Let me know if you want this included.
+Per `mem://project/prerender-pipeline`, `scripts/prerender.ts`, the `__PRERENDERING` bypass in `src/main.tsx`, and the related deps/scripts are owned by you and must not be modified by Lovable. So I will **not** edit `scripts/prerender.ts`. The fix for the duplicate-title problem belongs in your external pipeline.
 
-## Next step
+Most likely cause inside `scripts/prerender.ts` (for your reference, not for me to change): Puppeteer reuses one `page` instance across iterations and `page.goto(url, { waitUntil: 'networkidle0' })` may be resolving against a cached navigation, or `waitForSelector('link[rel="canonical"]')` is resolving on a stale canonical from the previous iteration before React re-runs `usePageMeta` for the new path. Common fixes: create a fresh page per route, add `await page.evaluate(() => document.querySelector('link[rel="canonical"]')?.remove())` before navigation, or wait for a route-specific marker (e.g. `document.title` to change away from the previous value, or an `h1` text match). Again — you, not me, to apply.
 
-Approve this plan and I'll write both memory files in one go. No app code changes.
+---
+
+## Plan (what I will change in Lovable)
+
+### Single change
+
+**`src/pages/Index.tsx`** — replace `&` with `and` in the home title:
+
+Before:
+```
+"Registered Massage Therapy in North Vancouver – Clinical Treatment & Root-Cause Recovery | Scandinavian Clinic"
+```
+After:
+```
+"Registered Massage Therapy in North Vancouver – Clinical Treatment and Root-Cause Recovery | Scandinavian Clinic"
+```
+
+### What I will NOT change
+
+- `scripts/prerender.ts` — off-limits.
+- The `__PRERENDERING` bypass in `src/main.tsx` — off-limits.
+- `usePageMeta` / per-page titles — verified correct, no fallback or override exists.
+
+---
+
+## Action required from you
+
+The duplicate-title problem on the published site can only be fixed in your prerender pipeline. The Lovable-side React code already sets the correct per-page title; it's the prerendered HTML files that are wrong. After you fix the pipeline and redeploy, the per-page titles I previously listed will be served correctly without further code changes here.
+
+If you'd like, I can also draft a short technical note for your prerender-side fix (without touching the file) — just say the word.

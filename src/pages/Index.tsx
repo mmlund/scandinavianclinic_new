@@ -11,7 +11,7 @@ import { homeSchema } from "@/lib/schemas";
 
 const Index = () => {
   usePageMeta({
-    title: "Registered Massage Therapy in North Vancouver – Clinical Treatment & Root-Cause Recovery | Scandinavian Clinic",
+    title: "Registered Massage Therapy in North Vancouver – Clinical Treatment and Root-Cause Recovery | Scandinavian Clinic",
     description: "Clinical registered massage therapy in North Vancouver focused on assessment, root-cause treatment, and long-term recovery. Biomechanical analysis, corrective exercise, and hands-on treatment for pain, injury, and dysfunction.",
     jsonLd: homeSchema,
   });

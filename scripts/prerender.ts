@@ -101,8 +101,13 @@ async function main() {
       try {
         await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
         
-        // Wait for usePageMeta to inject canonical link
-        await page.waitForSelector('link[rel="canonical"]', { timeout: 10000 });
+        // Try to wait for canonical link (indicates SEO meta tags are ready).
+        // If it doesn't exist (e.g. user forgot usePageMeta or it's a new site), just proceed after 5s.
+        try {
+          await page.waitForSelector('link[rel="canonical"]', { timeout: 5000 });
+        } catch (e) {
+          console.log(`  ! No canonical link found for ${route}, proceeding with current HTML...`);
+        }
         
         // Grab the fully rendered HTML and add data-prerendered
         let html = await page.evaluate(() => {

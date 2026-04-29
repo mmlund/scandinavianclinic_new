@@ -127,6 +127,20 @@ async function main() {
         console.error(`  ✗ Failed: ${route}`, err.message);
       }
     }
+
+    console.log('Writing raw SPA shells for excluded routes (for Render Clean URLs fallback)...');
+    for (const route of EXCLUDED_ROUTES) {
+      if (route === '/404') continue;
+      const targetFile = join(DIST_DIR, `${route}.html`);
+      await fs.mkdir(resolve(targetFile, '..'), { recursive: true });
+      await fs.writeFile(targetFile, originalIndexHtml);
+      console.log(`  ✓ Wrote shell for: ${route}`);
+    }
+
+    // Write a standard 404.html for Render
+    await fs.writeFile(join(DIST_DIR, '404.html'), originalIndexHtml);
+    console.log(`  ✓ Wrote 404.html fallback`);
+
   } finally {
     console.log('Closing browser and server...');
     await browser.close();

@@ -193,6 +193,20 @@ const ConditionsTreated = () => {
                     </li>
                   ))}
                 </ul>
+                {section.links && section.links.length > 0 && (
+                  <div className="mt-6 pt-5 border-t border-border/60 flex flex-col sm:flex-row sm:flex-wrap gap-x-6 gap-y-2">
+                    {section.links.map((l) => (
+                      <Link
+                        key={l.to}
+                        to={l.to}
+                        className="inline-flex items-center gap-1.5 text-primary font-semibold hover:text-accent transition-colors"
+                      >
+                        {l.label}
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </Card>
             ))}
           </div>

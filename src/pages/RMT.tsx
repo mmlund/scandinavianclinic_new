@@ -13,6 +13,7 @@ import {
   Zap,
   HeartPulse,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroEva from "@/assets/rmt-hero-eva.jpg";
 import rmtSession from "@/assets/rmt-session-new.jpg";
 import evaProfile from "@/assets/rmt-puzzle.jpg";
@@ -209,7 +210,19 @@ const RMT = () => {
                         <h3 className="text-lg font-bold text-foreground mb-1">
                           {condition.title}
                         </h3>
-                        <p className="text-muted-foreground">{condition.description}</p>
+                        <p className="text-muted-foreground">
+                          {condition.links.map((l, i) => (
+                            <span key={l.to + l.label}>
+                              <Link
+                                to={l.to}
+                                className="text-primary underline underline-offset-4 hover:text-accent transition-colors"
+                              >
+                                {l.label}
+                              </Link>
+                              {i < condition.links.length - 1 ? ", " : "."}
+                            </span>
+                          ))}
+                        </p>
                       </div>
                     </div>
                   ))}

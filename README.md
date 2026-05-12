@@ -115,3 +115,8 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+
+## Pre-launch TODO
+
+- `/icbc-rmt-north-vancouver` is a placeholder page (noindex, excluded from sitemap). Write full content before public launch, then remove `noindex: true` from `src/pages/IcbcRmtNorthVancouver.tsx` and add the route to `scripts/sitemap-config.ts`.

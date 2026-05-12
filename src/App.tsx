@@ -34,6 +34,7 @@ import HeadachesTreatmentNorthVancouver from "./pages/HeadachesTreatmentNorthVan
 import ShoulderInjuryTreatmentNorthVancouver from "./pages/ShoulderInjuryTreatmentNorthVancouver";
 import HipPainTreatmentNorthVancouver from "./pages/HipPainTreatmentNorthVancouver";
 import IcbcRmtNorthVancouver from "./pages/IcbcRmtNorthVancouver";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <TrackingInit />
         <Routes>
           <Route path="/" element={<Index />} />

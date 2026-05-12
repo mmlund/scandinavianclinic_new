@@ -25,12 +25,12 @@ const Services = () => {
     jsonLd: servicesSchema,
   });
 
-  const conditions = [
-    "Chronic Back & Neck Pain",
-    "Sports & Overuse Injuries",
-    "Scoliosis Management",
-    "Nerve Impingement & Sciatica",
-    "Jaw Pain (TMJ) and Headaches",
+  const conditions: { label: string; to: string }[] = [
+    { label: "Chronic Back & Neck Pain", to: "/conditions/back-pain-treatment-north-vancouver" },
+    { label: "Sports & Overuse Injuries", to: "/conditions/tennis-elbow-treatment-north-vancouver" },
+    { label: "Scoliosis Management", to: "/conditions/back-pain-treatment-north-vancouver" },
+    { label: "Nerve Impingement & Sciatica", to: "/conditions/sciatica-treatment-north-vancouver" },
+    { label: "Jaw Pain (TMJ) and Headaches", to: "/conditions/headaches-treatment-north-vancouver" },
   ];
 
   return (
@@ -247,18 +247,19 @@ const Services = () => {
             </div>
             <div className="grid sm:grid-cols-2 gap-4 mb-10">
               {conditions.map((c) => (
-                <Card
-                  key={c}
-                  className="p-5 border-0 shadow-card bg-background flex items-center gap-3"
-                >
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="font-medium text-foreground">{c}</span>
-                </Card>
+                <Link key={c.to + c.label} to={c.to} className="group">
+                  <Card className="p-5 border-0 shadow-card bg-background flex items-center gap-3 hover:shadow-lg transition-shadow">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span className="font-medium text-foreground group-hover:text-accent transition-colors">
+                      {c.label}
+                    </span>
+                  </Card>
+                </Link>
               ))}
             </div>
             <div className="text-center">
               <Button asChild variant="outline" size="lg">
-                <Link to="/conditions-treated">
+                <Link to="/conditions">
                   View the Full List of Conditions
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>

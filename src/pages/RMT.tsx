@@ -48,21 +48,32 @@ const RMT = () => {
     },
   ];
 
-  const conditions = [
+  type ConditionLink = { label: string; to: string };
+  const conditions: { icon: JSX.Element; title: string; links: ConditionLink[] }[] = [
     {
       icon: <Bone className="w-7 h-7" />,
       title: "Spinal Health",
-      description: "Back pain, neck pain, and disc-related dysfunction.",
+      links: [
+        { label: "Back pain", to: "/conditions/back-pain-treatment-north-vancouver" },
+        { label: "neck pain", to: "/conditions/neck-pain-treatment-north-vancouver" },
+        { label: "disc-related dysfunction", to: "/conditions/back-pain-treatment-north-vancouver" },
+      ],
     },
     {
       icon: <Zap className="w-7 h-7" />,
       title: "Nerve Issues",
-      description: "Sciatica and chronic impingement.",
+      links: [
+        { label: "Sciatica", to: "/conditions/sciatica-treatment-north-vancouver" },
+        { label: "chronic impingement", to: "/conditions/shoulder-injury-treatment-north-vancouver" },
+      ],
     },
     {
       icon: <HeartPulse className="w-7 h-7" />,
       title: "Injury Recovery",
-      description: "Sports injuries and ICBC motor vehicle accident claims.",
+      links: [
+        { label: "Sports injuries", to: "/conditions/tennis-elbow-treatment-north-vancouver" },
+        { label: "ICBC motor vehicle accident claims", to: "/icbc-rmt-north-vancouver" },
+      ],
     },
   ];
 

@@ -425,7 +425,7 @@ export const conditionsTreatedSchema = {
     },
     breadcrumb([
       { name: "Home", url: "https://scandinavianclinic.com/" },
-      { name: "Conditions Treated", url: "https://scandinavianclinic.com/conditions-treated" },
+      { name: "Conditions Treated", url: "https://scandinavianclinic.com/conditions" },
     ]),
   ],
 };

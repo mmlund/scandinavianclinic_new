@@ -20,7 +20,7 @@ export interface SitemapRoute {
 export const SITE_URL = "https://scandinavianclinic.com";
 
 // Indexable routes only. Excludes: /draft, /payment, /backpain, /rmt-core2,
-// /first-visit (canonical via /conditions-treated), /testimonials duplicate of homepage section,
+// /first-visit (canonical via /conditions), /testimonials duplicate of homepage section,
 // and any internal/test pages.
 export const SITEMAP_ROUTES: SitemapRoute[] = [
   // Home — highest priority

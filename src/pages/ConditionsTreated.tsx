@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import {
   Calendar,
   Bone,
@@ -11,6 +12,7 @@ import {
   Car,
   HeartPulse,
   CheckCircle,
+  ArrowRight,
 } from "lucide-react";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { conditionsTreatedSchema } from "@/lib/schemas";

@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { BackToConditionsLink } from "@/components/BackToConditionsLink";
 import { Contact } from "@/components/Contact";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -223,6 +224,12 @@ const HeadachesTreatmentNorthVancouver = () => {
             </div>
           </div>
         </section>
+        {/* Back to hub (top) */}
+        <section className="pt-6 bg-background">
+          <BackToConditionsLink />
+        </section>
+
+
 
         {/* Understanding Headaches */}
         <section className="py-20 bg-background">
@@ -394,6 +401,12 @@ const HeadachesTreatmentNorthVancouver = () => {
             </div>
           </div>
         </section>
+        {/* Back to hub (bottom) */}
+        <section className="pb-6 bg-background">
+          <BackToConditionsLink />
+        </section>
+
+
 
         {/* Schedule Your Visit */}
         <section className="py-20 bg-primary text-primary-foreground">

@@ -107,7 +107,7 @@ export const Services = () => {
           <p className="text-lg text-muted-foreground text-center leading-relaxed mb-6">
             Our first step is always to find the root cause of your pain. Treatment is then tailored 
             to your specific{" "}
-            <Link to="/conditions-treated" className="text-accent underline underline-offset-4 hover:text-accent/80 transition-colors">
+            <Link to="/conditions" className="text-accent underline underline-offset-4 hover:text-accent/80 transition-colors">
               condition
             </Link>
             {" "}and needs. Our goal is to alleviate your pain and prevent it from returning.

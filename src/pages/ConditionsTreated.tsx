@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import {
   Calendar,
   Bone,
@@ -11,6 +12,7 @@ import {
   Car,
   HeartPulse,
   CheckCircle,
+  ArrowRight,
 } from "lucide-react";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { conditionsTreatedSchema } from "@/lib/schemas";
@@ -31,18 +33,13 @@ const ConditionsTreated = () => {
       intro:
         "Back and neck issues are the most common reasons patients seek RMT. We provide targeted treatment for:",
       items: [
-        {
-          term: "Lower Back Pain",
-          desc: "Including muscle strains, disc-related issues, and stiffness from prolonged sitting.",
-        },
-        {
-          term: "Neck Pain & Stiffness",
-          desc: 'Addressing "tech neck," reduced range of motion, and postural imbalances.',
-        },
-        {
-          term: "Degenerative Changes",
-          desc: "Managing symptoms related to osteoarthritis and spinal wear and tear.",
-        },
+        { term: "Lower Back Pain", desc: "Including muscle strains, disc-related issues, and stiffness from prolonged sitting." },
+        { term: "Neck Pain & Stiffness", desc: 'Addressing "tech neck," reduced range of motion, and postural imbalances.' },
+        { term: "Degenerative Changes", desc: "Managing symptoms related to osteoarthritis and spinal wear and tear." },
+      ],
+      links: [
+        { label: "Read more about back pain treatment", to: "/conditions/back-pain-treatment-north-vancouver" },
+        { label: "Read more about neck pain treatment", to: "/conditions/neck-pain-treatment-north-vancouver" },
       ],
     },
     {
@@ -51,18 +48,12 @@ const ConditionsTreated = () => {
       intro:
         'Many headaches are "cervicogenic," meaning they originate from tension in the neck and shoulders.',
       items: [
-        {
-          term: "Tension Headaches",
-          desc: "Releasing the myofascial triggers in the upper back and neck.",
-        },
-        {
-          term: "Migraine Support",
-          desc: "Reducing the frequency and intensity of migraines by addressing physical triggers.",
-        },
-        {
-          term: "TMJ / Jaw Pain",
-          desc: "Treating the muscles of mastication to relieve jaw clicking, locking, and facial pain.",
-        },
+        { term: "Tension Headaches", desc: "Releasing the myofascial triggers in the upper back and neck." },
+        { term: "Migraine Support", desc: "Reducing the frequency and intensity of migraines by addressing physical triggers." },
+        { term: "TMJ / Jaw Pain", desc: "Treating the muscles of mastication to relieve jaw clicking, locking, and facial pain." },
+      ],
+      links: [
+        { label: "Read more about headache treatment", to: "/conditions/headaches-treatment-north-vancouver" },
       ],
     },
     {
@@ -71,22 +62,15 @@ const ConditionsTreated = () => {
       intro:
         "Whether you are a competitive athlete or a weekend warrior, we help you return to activity faster.",
       items: [
-        {
-          term: "Overuse Injuries",
-          desc: "Tennis elbow, golfer's elbow, and repetitive strain from work or sport.",
-        },
-        {
-          term: "Strains and Sprains",
-          desc: "Rehabilitation for muscle tears and ligament over-stretching.",
-        },
-        {
-          term: "Tendinopathy",
-          desc: "Managing chronic tendon pain in the shoulders, hips, and ankles.",
-        },
-        {
-          term: "Post-Surgical Rehabilitation",
-          desc: "Assisting in the recovery process after orthopedic surgeries.",
-        },
+        { term: "Overuse Injuries", desc: "Tennis elbow, golfer's elbow, and repetitive strain from work or sport." },
+        { term: "Strains and Sprains", desc: "Rehabilitation for muscle tears and ligament over-stretching." },
+        { term: "Tendinopathy", desc: "Managing chronic tendon pain in the shoulders, hips, and ankles." },
+        { term: "Post-Surgical Rehabilitation", desc: "Assisting in the recovery process after orthopedic surgeries." },
+      ],
+      links: [
+        { label: "Read more about tennis elbow treatment", to: "/conditions/tennis-elbow-treatment-north-vancouver" },
+        { label: "Read more about shoulder injury treatment", to: "/conditions/shoulder-injury-treatment-north-vancouver" },
+        { label: "Read more about hip pain treatment", to: "/conditions/hip-pain-treatment-north-vancouver" },
       ],
     },
     {
@@ -95,18 +79,12 @@ const ConditionsTreated = () => {
       intro:
         "We treat conditions where nerve pathways are compressed or irritated:",
       items: [
-        {
-          term: "Sciatica",
-          desc: "Relieving pressure on the sciatic nerve to reduce radiating leg pain.",
-        },
-        {
-          term: "Thoracic Outlet Syndrome",
-          desc: "Addressing numbness or tingling in the arms and hands.",
-        },
-        {
-          term: "Carpal Tunnel Syndrome",
-          desc: "Managing wrist and hand pain through forearm and hand treatments.",
-        },
+        { term: "Sciatica", desc: "Relieving pressure on the sciatic nerve to reduce radiating leg pain." },
+        { term: "Thoracic Outlet Syndrome", desc: "Addressing numbness or tingling in the arms and hands." },
+        { term: "Carpal Tunnel Syndrome", desc: "Managing wrist and hand pain through forearm and hand treatments." },
+      ],
+      links: [
+        { label: "Read more about sciatica treatment", to: "/conditions/sciatica-treatment-north-vancouver" },
       ],
     },
     {
@@ -115,18 +93,12 @@ const ConditionsTreated = () => {
       intro:
         "If you have been injured in a motor vehicle accident or at work, RMT can be a vital part of your recovery.",
       items: [
-        {
-          term: "Whiplash",
-          desc: "Addressing the soft tissue damage and restricted motion common after a collision.",
-        },
-        {
-          term: "Concussion Support",
-          desc: "Managing the neck tension and headaches often associated with head injuries.",
-        },
-        {
-          term: "Post-Accident Trauma",
-          desc: "Reducing the global muscle guarding and pain following a traumatic event.",
-        },
+        { term: "Whiplash", desc: "Addressing the soft tissue damage and restricted motion common after a collision." },
+        { term: "Concussion Support", desc: "Managing the neck tension and headaches often associated with head injuries." },
+        { term: "Post-Accident Trauma", desc: "Reducing the global muscle guarding and pain following a traumatic event." },
+      ],
+      links: [
+        { label: "Learn more about ICBC RMT treatment", to: "/icbc-rmt-north-vancouver" },
       ],
     },
     {
@@ -135,19 +107,11 @@ const ConditionsTreated = () => {
       intro:
         "Massage therapy can provide symptomatic relief for long-term health challenges:",
       items: [
-        {
-          term: "Scoliosis",
-          desc: "Managing the muscular imbalances and pain associated with spinal curvature.",
-        },
-        {
-          term: "Fibromyalgia & Chronic Pain",
-          desc: "Using a systematic approach to modulate the body's pain response.",
-        },
-        {
-          term: "Arthritis",
-          desc: "Improving joint mobility and reducing the muscle tension surrounding arthritic joints.",
-        },
+        { term: "Scoliosis", desc: "Managing the muscular imbalances and pain associated with spinal curvature." },
+        { term: "Fibromyalgia & Chronic Pain", desc: "Using a systematic approach to modulate the body's pain response." },
+        { term: "Arthritis", desc: "Improving joint mobility and reducing the muscle tension surrounding arthritic joints." },
       ],
+      links: [],
     },
   ];
 
@@ -229,6 +193,20 @@ const ConditionsTreated = () => {
                     </li>
                   ))}
                 </ul>
+                {section.links && section.links.length > 0 && (
+                  <div className="mt-6 pt-5 border-t border-border/60 flex flex-col sm:flex-row sm:flex-wrap gap-x-6 gap-y-2">
+                    {section.links.map((l) => (
+                      <Link
+                        key={l.to}
+                        to={l.to}
+                        className="inline-flex items-center gap-1.5 text-primary font-semibold hover:text-accent transition-colors"
+                      >
+                        {l.label}
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </Card>
             ))}
           </div>

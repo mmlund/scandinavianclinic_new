@@ -33,6 +33,7 @@ import TennisElbowTreatmentNorthVancouver from "./pages/TennisElbowTreatmentNort
 import HeadachesTreatmentNorthVancouver from "./pages/HeadachesTreatmentNorthVancouver";
 import ShoulderInjuryTreatmentNorthVancouver from "./pages/ShoulderInjuryTreatmentNorthVancouver";
 import HipPainTreatmentNorthVancouver from "./pages/HipPainTreatmentNorthVancouver";
+import IcbcRmtNorthVancouver from "./pages/IcbcRmtNorthVancouver";
 
 const queryClient = new QueryClient();
 
@@ -70,7 +71,7 @@ const App = () => (
           <Route path="/payment" element={<Payment />} />
           <Route path="/backpain" element={<BackPain />} />
           <Route path="/booking" element={<Booking />} />
-          <Route path="/conditions-treated" element={<ConditionsTreated />} />
+          <Route path="/conditions" element={<ConditionsTreated />} />
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/facilities" element={<Facilities />} />
           <Route path="/contact" element={<Contact />} />
@@ -87,6 +88,7 @@ const App = () => (
           <Route path="/conditions/headaches-treatment-north-vancouver" element={<HeadachesTreatmentNorthVancouver />} />
           <Route path="/conditions/shoulder-injury-treatment-north-vancouver" element={<ShoulderInjuryTreatmentNorthVancouver />} />
           <Route path="/conditions/hip-pain-treatment-north-vancouver" element={<HipPainTreatmentNorthVancouver />} />
+          <Route path="/icbc-rmt-north-vancouver" element={<IcbcRmtNorthVancouver />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

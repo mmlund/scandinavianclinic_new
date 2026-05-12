@@ -57,6 +57,9 @@ export const Navigation = () => {
                   <Link to="/about-me">About</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
+                  <Link to="/icbc-rmt-north-vancouver">ICBC Coverage</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link to="/testimonials">Testimonials</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -72,7 +75,7 @@ export const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="bg-background z-50">
                 <DropdownMenuItem asChild>
-                  <Link to="/conditions-treated">Conditions Treated</Link>
+                  <Link to="/conditions">Conditions Treated</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/conditions/back-pain-treatment-north-vancouver">Back Pain</Link>
@@ -132,11 +135,12 @@ export const Navigation = () => {
           <div className="md:hidden mt-4 py-4 bg-background rounded-lg shadow-lg">
             <div className="flex flex-col gap-4">
               <Link to="/about-me" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">About</Link>
+              <Link to="/icbc-rmt-north-vancouver" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">ICBC Coverage</Link>
               <Link to="/testimonials" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Testimonials</Link>
               <Link to="/education" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Education</Link>
               <Link to="/services" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Services</Link>
               <Link to="/first-visit" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">First Visit</Link>
-              <Link to="/conditions-treated" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Conditions</Link>
+              <Link to="/conditions" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Conditions</Link>
               <Link to="/conditions/back-pain-treatment-north-vancouver" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Back Pain</Link>
               <Link to="/conditions/sciatica-treatment-north-vancouver" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Sciatica</Link>
               <Link to="/conditions/neck-pain-treatment-north-vancouver" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left pl-8">Neck Pain</Link>

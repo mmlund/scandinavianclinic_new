@@ -30,7 +30,7 @@ export const SITEMAP_ROUTES: SitemapRoute[] = [
   { path: "/r-m-t", priority: 0.9, changefreq: "monthly" },
   { path: "/d-n-s", priority: 0.9, changefreq: "monthly" },
   { path: "/services", priority: 0.9, changefreq: "monthly" },
-  { path: "/conditions-treated", priority: 0.9, changefreq: "monthly" },
+  { path: "/conditions", priority: 0.9, changefreq: "monthly" },
   { path: "/conditions/back-pain-treatment-north-vancouver", priority: 0.9, changefreq: "monthly" },
   { path: "/conditions/sciatica-treatment-north-vancouver", priority: 0.9, changefreq: "monthly" },
   { path: "/conditions/neck-pain-treatment-north-vancouver", priority: 0.9, changefreq: "monthly" },

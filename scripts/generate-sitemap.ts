@@ -15,7 +15,7 @@ function getRouteLastMod(routePath: string, projectRoot: string): Date {
     "/r-m-t": ["src/pages/RMT.tsx"],
     "/d-n-s": ["src/pages/DNS.tsx"],
     "/services": ["src/pages/Services.tsx", "src/components/Services.tsx"],
-    "/conditions-treated": ["src/pages/ConditionsTreated.tsx"],
+    "/conditions": ["src/pages/ConditionsTreated.tsx"],
     "/conditions/back-pain-treatment-north-vancouver": ["src/pages/BackPainTreatmentNorthVancouver.tsx"],
     "/rmt-core1": ["src/pages/RMTCore1.tsx"],
     "/rmt-core3": ["src/pages/RMTCore3.tsx"],

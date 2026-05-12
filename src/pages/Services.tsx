@@ -286,7 +286,7 @@ const Services = () => {
               </p>
               <p className="text-primary-foreground/90 flex items-center justify-center gap-2 mb-1">
                 <MapPin className="w-4 h-4" />
-                101 16th St W Suite 202, North Vancouver, BC V7M 1T6
+                101 16th St W Suite 202, North Vancouver, BC V7M 1T3
               </p>
               <a
                 href="tel:+16049264883"
